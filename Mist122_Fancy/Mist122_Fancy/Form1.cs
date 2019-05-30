@@ -14,7 +14,7 @@ namespace Mist122_Fancy
     {
         public Form1()
         {
-            InitializeComponent();/*123*/
+            InitializeComponent(); // 拉拉魯拉拉
         }
     }
 }
