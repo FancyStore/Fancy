@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Mist122_Fancy
 {
-    public partial class TestPush : Form
+    public partial class Form1 : Form
     {
-        public TestPush()
+        public Form1()
         {
             InitializeComponent(); // 拉拉魯拉拉
-
-        }
-
-        public string github()
-        {
-            return "pushok";
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Mist122_Fancy
 {
-    partial class TestPush
+    partial class Form1
     {
         /// <summary>
         /// 設計工具所需的變數。
