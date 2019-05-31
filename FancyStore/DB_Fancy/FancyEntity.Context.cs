@@ -28,7 +28,7 @@ namespace DB_Fancy
         public virtual DbSet<CategoryLarge> CategoryLarges { get; set; }
         public virtual DbSet<CategoryMiddle> CategoryMiddles { get; set; }
         public virtual DbSet<CategorySmall> CategorySmalls { get; set; }
-        public virtual DbSet<City> Cities { get; set; }
+        public virtual DbSet<C> Cities { get; set; }
         public virtual DbSet<Color> Colors { get; set; }
         public virtual DbSet<DiscountMethod> DiscountMethods { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }

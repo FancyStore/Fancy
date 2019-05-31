@@ -25,7 +25,7 @@ namespace DB_Fancy
         public string RegionName { get; set; }
         public int CityID { get; set; }
     
-        public virtual City City { get; set; }
+        public virtual C City { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Employee> Employees { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
