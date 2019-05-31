@@ -33,7 +33,7 @@
             this.SK_UC_CartItem_ProductColor_lbl = new System.Windows.Forms.Label();
             this.SK_UC_CartItem_OrderQTY_lbl = new System.Windows.Forms.Label();
             this.SK_UC_CartItem_ProductName_linklbl = new System.Windows.Forms.LinkLabel();
-            this.SK_UC_CartItem_RemoveItem_lbl = new System.Windows.Forms.Button();
+            this.SK_UC_CartItem_RemoveRowOrder_lbl = new System.Windows.Forms.Button();
             this.SK_UC_CartItem_OrderQTYReduce_lbl = new System.Windows.Forms.Button();
             this.SK_UC_CartItem_OrderQTYIncrease_lbl = new System.Windows.Forms.Button();
             this.SK_UC_CartItem_ProductStockQTY_lbl = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_CartItem_ProductSize_lbl, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_CartItem_ProductName_linklbl, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_CartItem_OrderQTYIncrease_lbl, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.SK_UC_CartItem_RemoveItem_lbl, 7, 0);
+            this.tableLayoutPanel1.Controls.Add(this.SK_UC_CartItem_RemoveRowOrder_lbl, 7, 0);
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_CartItem_OrderQTYReduce_lbl, 4, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 1);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -78,7 +78,7 @@
             this.SK_UC_CartItem_ProductSize_lbl.Name = "SK_UC_CartItem_ProductSize_lbl";
             this.SK_UC_CartItem_ProductSize_lbl.Size = new System.Drawing.Size(73, 67);
             this.SK_UC_CartItem_ProductSize_lbl.TabIndex = 1;
-            this.SK_UC_CartItem_ProductSize_lbl.Text = "label1";
+            this.SK_UC_CartItem_ProductSize_lbl.Text = "Product        Size";
             this.SK_UC_CartItem_ProductSize_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SK_UC_CartItem_ProductColor_lbl
@@ -89,7 +89,7 @@
             this.SK_UC_CartItem_ProductColor_lbl.Name = "SK_UC_CartItem_ProductColor_lbl";
             this.SK_UC_CartItem_ProductColor_lbl.Size = new System.Drawing.Size(123, 67);
             this.SK_UC_CartItem_ProductColor_lbl.TabIndex = 1;
-            this.SK_UC_CartItem_ProductColor_lbl.Text = "label1";
+            this.SK_UC_CartItem_ProductColor_lbl.Text = "ProductColor";
             this.SK_UC_CartItem_ProductColor_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.SK_UC_CartItem_ProductColor_lbl.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -101,7 +101,7 @@
             this.SK_UC_CartItem_OrderQTY_lbl.Name = "SK_UC_CartItem_OrderQTY_lbl";
             this.SK_UC_CartItem_OrderQTY_lbl.Size = new System.Drawing.Size(73, 67);
             this.SK_UC_CartItem_OrderQTY_lbl.TabIndex = 1;
-            this.SK_UC_CartItem_OrderQTY_lbl.Text = "label1";
+            this.SK_UC_CartItem_OrderQTY_lbl.Text = "OrderQTY";
             this.SK_UC_CartItem_OrderQTY_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.SK_UC_CartItem_OrderQTY_lbl.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -114,21 +114,21 @@
             this.SK_UC_CartItem_ProductName_linklbl.Size = new System.Drawing.Size(398, 67);
             this.SK_UC_CartItem_ProductName_linklbl.TabIndex = 0;
             this.SK_UC_CartItem_ProductName_linklbl.TabStop = true;
-            this.SK_UC_CartItem_ProductName_linklbl.Text = "linkLabel1";
+            this.SK_UC_CartItem_ProductName_linklbl.Text = "ProductName";
             this.SK_UC_CartItem_ProductName_linklbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.SK_UC_CartItem_ProductName_linklbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SK_UC_CartItem_linklbl_LinkClicked);
             // 
-            // SK_UC_CartItem_RemoveItem_lbl
+            // SK_UC_CartItem_RemoveRowOrder_lbl
             // 
-            this.SK_UC_CartItem_RemoveItem_lbl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.SK_UC_CartItem_RemoveItem_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.SK_UC_CartItem_RemoveItem_lbl.Location = new System.Drawing.Point(834, 3);
-            this.SK_UC_CartItem_RemoveItem_lbl.Margin = new System.Windows.Forms.Padding(0);
-            this.SK_UC_CartItem_RemoveItem_lbl.Name = "SK_UC_CartItem_RemoveItem_lbl";
-            this.SK_UC_CartItem_RemoveItem_lbl.Size = new System.Drawing.Size(78, 69);
-            this.SK_UC_CartItem_RemoveItem_lbl.TabIndex = 2;
-            this.SK_UC_CartItem_RemoveItem_lbl.Text = "button1";
-            this.SK_UC_CartItem_RemoveItem_lbl.UseVisualStyleBackColor = false;
+            this.SK_UC_CartItem_RemoveRowOrder_lbl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.SK_UC_CartItem_RemoveRowOrder_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.SK_UC_CartItem_RemoveRowOrder_lbl.Location = new System.Drawing.Point(834, 3);
+            this.SK_UC_CartItem_RemoveRowOrder_lbl.Margin = new System.Windows.Forms.Padding(0);
+            this.SK_UC_CartItem_RemoveRowOrder_lbl.Name = "SK_UC_CartItem_RemoveRowOrder_lbl";
+            this.SK_UC_CartItem_RemoveRowOrder_lbl.Size = new System.Drawing.Size(78, 69);
+            this.SK_UC_CartItem_RemoveRowOrder_lbl.TabIndex = 2;
+            this.SK_UC_CartItem_RemoveRowOrder_lbl.Text = "DelRowOrder";
+            this.SK_UC_CartItem_RemoveRowOrder_lbl.UseVisualStyleBackColor = false;
             // 
             // SK_UC_CartItem_OrderQTYReduce_lbl
             // 
@@ -139,7 +139,7 @@
             this.SK_UC_CartItem_OrderQTYReduce_lbl.Name = "SK_UC_CartItem_OrderQTYReduce_lbl";
             this.SK_UC_CartItem_OrderQTYReduce_lbl.Size = new System.Drawing.Size(30, 69);
             this.SK_UC_CartItem_OrderQTYReduce_lbl.TabIndex = 2;
-            this.SK_UC_CartItem_OrderQTYReduce_lbl.Text = "button1";
+            this.SK_UC_CartItem_OrderQTYReduce_lbl.Text = "-";
             this.SK_UC_CartItem_OrderQTYReduce_lbl.UseVisualStyleBackColor = false;
             // 
             // SK_UC_CartItem_OrderQTYIncrease_lbl
@@ -151,7 +151,7 @@
             this.SK_UC_CartItem_OrderQTYIncrease_lbl.Name = "SK_UC_CartItem_OrderQTYIncrease_lbl";
             this.SK_UC_CartItem_OrderQTYIncrease_lbl.Size = new System.Drawing.Size(30, 69);
             this.SK_UC_CartItem_OrderQTYIncrease_lbl.TabIndex = 2;
-            this.SK_UC_CartItem_OrderQTYIncrease_lbl.Text = "button1";
+            this.SK_UC_CartItem_OrderQTYIncrease_lbl.Text = "+";
             this.SK_UC_CartItem_OrderQTYIncrease_lbl.UseVisualStyleBackColor = false;
             // 
             // SK_UC_CartItem_ProductStockQTY_lbl
@@ -162,7 +162,7 @@
             this.SK_UC_CartItem_ProductStockQTY_lbl.Name = "SK_UC_CartItem_ProductStockQTY_lbl";
             this.SK_UC_CartItem_ProductStockQTY_lbl.Size = new System.Drawing.Size(73, 67);
             this.SK_UC_CartItem_ProductStockQTY_lbl.TabIndex = 1;
-            this.SK_UC_CartItem_ProductStockQTY_lbl.Text = "label1";
+            this.SK_UC_CartItem_ProductStockQTY_lbl.Text = "ProductStockQTY";
             this.SK_UC_CartItem_ProductStockQTY_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.SK_UC_CartItem_ProductStockQTY_lbl.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -186,7 +186,7 @@
         private System.Windows.Forms.LinkLabel SK_UC_CartItem_ProductName_linklbl;
         private System.Windows.Forms.Label SK_UC_CartItem_ProductSize_lbl;
         private System.Windows.Forms.Label SK_UC_CartItem_ProductColor_lbl;
-        private System.Windows.Forms.Button SK_UC_CartItem_RemoveItem_lbl;
+        private System.Windows.Forms.Button SK_UC_CartItem_RemoveRowOrder_lbl;
         private System.Windows.Forms.Label SK_UC_CartItem_OrderQTY_lbl;
         private System.Windows.Forms.Button SK_UC_CartItem_OrderQTYReduce_lbl;
         private System.Windows.Forms.Button SK_UC_CartItem_OrderQTYIncrease_lbl;
