@@ -53,7 +53,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_CartItem_OrderQTY_lbl, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_CartItem_ProductColor_lbl, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_CartItem_ProductStockQTY_lbl, 3, 0);
@@ -62,17 +62,17 @@
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_CartItem_OrderQTYIncrease_lbl, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_CartItem_RemoveRowOrder_lbl, 7, 0);
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_CartItem_OrderQTYReduce_lbl, 4, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(912, 75);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(915, 75);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // SK_UC_CartItem_ProductSize_lbl
             // 
-            this.SK_UC_CartItem_ProductSize_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.SK_UC_CartItem_ProductSize_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
             this.SK_UC_CartItem_ProductSize_lbl.Location = new System.Drawing.Point(407, 4);
             this.SK_UC_CartItem_ProductSize_lbl.Margin = new System.Windows.Forms.Padding(1);
             this.SK_UC_CartItem_ProductSize_lbl.Name = "SK_UC_CartItem_ProductSize_lbl";
@@ -83,7 +83,7 @@
             // 
             // SK_UC_CartItem_ProductColor_lbl
             // 
-            this.SK_UC_CartItem_ProductColor_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.SK_UC_CartItem_ProductColor_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
             this.SK_UC_CartItem_ProductColor_lbl.Location = new System.Drawing.Point(485, 4);
             this.SK_UC_CartItem_ProductColor_lbl.Margin = new System.Windows.Forms.Padding(1);
             this.SK_UC_CartItem_ProductColor_lbl.Name = "SK_UC_CartItem_ProductColor_lbl";
@@ -95,7 +95,7 @@
             // 
             // SK_UC_CartItem_OrderQTY_lbl
             // 
-            this.SK_UC_CartItem_OrderQTY_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.SK_UC_CartItem_OrderQTY_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
             this.SK_UC_CartItem_OrderQTY_lbl.Location = new System.Drawing.Point(724, 4);
             this.SK_UC_CartItem_OrderQTY_lbl.Margin = new System.Windows.Forms.Padding(1);
             this.SK_UC_CartItem_OrderQTY_lbl.Name = "SK_UC_CartItem_OrderQTY_lbl";
@@ -107,7 +107,7 @@
             // 
             // SK_UC_CartItem_ProductName_linklbl
             // 
-            this.SK_UC_CartItem_ProductName_linklbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.SK_UC_CartItem_ProductName_linklbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
             this.SK_UC_CartItem_ProductName_linklbl.Location = new System.Drawing.Point(4, 4);
             this.SK_UC_CartItem_ProductName_linklbl.Margin = new System.Windows.Forms.Padding(1);
             this.SK_UC_CartItem_ProductName_linklbl.Name = "SK_UC_CartItem_ProductName_linklbl";
@@ -121,7 +121,7 @@
             // SK_UC_CartItem_RemoveRowOrder_lbl
             // 
             this.SK_UC_CartItem_RemoveRowOrder_lbl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.SK_UC_CartItem_RemoveRowOrder_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.SK_UC_CartItem_RemoveRowOrder_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
             this.SK_UC_CartItem_RemoveRowOrder_lbl.Location = new System.Drawing.Point(834, 3);
             this.SK_UC_CartItem_RemoveRowOrder_lbl.Margin = new System.Windows.Forms.Padding(0);
             this.SK_UC_CartItem_RemoveRowOrder_lbl.Name = "SK_UC_CartItem_RemoveRowOrder_lbl";
@@ -133,7 +133,7 @@
             // SK_UC_CartItem_OrderQTYReduce_lbl
             // 
             this.SK_UC_CartItem_OrderQTYReduce_lbl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.SK_UC_CartItem_OrderQTYReduce_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.SK_UC_CartItem_OrderQTYReduce_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
             this.SK_UC_CartItem_OrderQTYReduce_lbl.Location = new System.Drawing.Point(690, 3);
             this.SK_UC_CartItem_OrderQTYReduce_lbl.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.SK_UC_CartItem_OrderQTYReduce_lbl.Name = "SK_UC_CartItem_OrderQTYReduce_lbl";
@@ -145,7 +145,7 @@
             // SK_UC_CartItem_OrderQTYIncrease_lbl
             // 
             this.SK_UC_CartItem_OrderQTYIncrease_lbl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.SK_UC_CartItem_OrderQTYIncrease_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.SK_UC_CartItem_OrderQTYIncrease_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
             this.SK_UC_CartItem_OrderQTYIncrease_lbl.Location = new System.Drawing.Point(801, 3);
             this.SK_UC_CartItem_OrderQTYIncrease_lbl.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.SK_UC_CartItem_OrderQTYIncrease_lbl.Name = "SK_UC_CartItem_OrderQTYIncrease_lbl";
@@ -156,7 +156,7 @@
             // 
             // SK_UC_CartItem_ProductStockQTY_lbl
             // 
-            this.SK_UC_CartItem_ProductStockQTY_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.SK_UC_CartItem_ProductStockQTY_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
             this.SK_UC_CartItem_ProductStockQTY_lbl.Location = new System.Drawing.Point(613, 4);
             this.SK_UC_CartItem_ProductStockQTY_lbl.Margin = new System.Windows.Forms.Padding(1);
             this.SK_UC_CartItem_ProductStockQTY_lbl.Name = "SK_UC_CartItem_ProductStockQTY_lbl";
@@ -173,7 +173,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "SK_UC_CartItem";
-            this.Size = new System.Drawing.Size(915, 75);
+            this.Size = new System.Drawing.Size(917, 75);
             this.Load += new System.EventHandler(this.SK_UC_CartItem_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

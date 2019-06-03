@@ -62,6 +62,12 @@
     <Compile Include="SK_UC_CartItem.Designer.cs">
       <DependentUpon>SK_UC_CartItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="SK_UC_CartTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SK_UC_CartTitle.Designer.cs">
+      <DependentUpon>SK_UC_CartTitle.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="img.resx">
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SK_UC_CartItem.resx">
       <DependentUpon>SK_UC_CartItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SK_UC_CartTitle.resx">
+      <DependentUpon>SK_UC_CartTitle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
