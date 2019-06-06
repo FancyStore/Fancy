@@ -13,24 +13,13 @@ namespace DB_Fancy
 {
 
 using System;
-    using System.Collections.Generic;
     
-public partial class ProductPhoto
+public partial class sp_helpdiagramdefinition_Result
 {
 
-    public int ProductPhotoID { get; set; }
+    public Nullable<int> version { get; set; }
 
-    public int ProductID { get; set; }
-
-    public Nullable<int> PhotoID { get; set; }
-
-    public Nullable<System.DateTime> CreateDate { get; set; }
-
-
-
-    public virtual Photo Photo { get; set; }
-
-    public virtual Product Product { get; set; }
+    public byte[] definition { get; set; }
 
 }
 

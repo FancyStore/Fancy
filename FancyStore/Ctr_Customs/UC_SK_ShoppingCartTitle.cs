@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Ctr_Customs
 {
-    public partial class SK_UC_CartTitle : UserControl
+    public partial class UC_SK_ShoppingCartTitle : UserControl
     {
-        public SK_UC_CartTitle()
+        public UC_SK_ShoppingCartTitle()
         {
             InitializeComponent();
         }

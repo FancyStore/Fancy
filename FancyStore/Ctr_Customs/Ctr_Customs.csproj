@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.Word, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -56,17 +59,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SK_UC_CartItem.cs">
+    <Compile Include="UC_SK_ShoppingItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SK_UC_CartItem.Designer.cs">
-      <DependentUpon>SK_UC_CartItem.cs</DependentUpon>
+    <Compile Include="UC_SK_ShoppingItem.Designer.cs">
+      <DependentUpon>UC_SK_ShoppingItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="SK_UC_CartTitle.cs">
+    <Compile Include="UC_SK_ShoppingCartTitle.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SK_UC_CartTitle.Designer.cs">
-      <DependentUpon>SK_UC_CartTitle.cs</DependentUpon>
+    <Compile Include="UC_SK_ShoppingCartTitle.Designer.cs">
+      <DependentUpon>UC_SK_ShoppingCartTitle.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -79,11 +82,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SK_UC_CartItem.resx">
-      <DependentUpon>SK_UC_CartItem.cs</DependentUpon>
+    <EmbeddedResource Include="UC_SK_ShoppingItem.resx">
+      <DependentUpon>UC_SK_ShoppingItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SK_UC_CartTitle.resx">
-      <DependentUpon>SK_UC_CartTitle.cs</DependentUpon>
+    <EmbeddedResource Include="UC_SK_ShoppingCartTitle.resx">
+      <DependentUpon>UC_SK_ShoppingCartTitle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -108,6 +111,10 @@
     <None Include="Resources\icons8-unchecked-checkbox-24.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Cls_Utility\Cls_Utility.csproj">
+      <Project>{62b747da-82e1-492f-bb41-bbe8fc2ea683}</Project>
+      <Name>Cls_Utility</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DB_Fancy\DB_Fancy.csproj">
       <Project>{5392D1D7-99DD-4BA6-9965-F1C02C0B51CB}</Project>
       <Name>DB_Fancy</Name>
