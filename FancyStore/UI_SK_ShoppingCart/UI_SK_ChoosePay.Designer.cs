@@ -222,6 +222,7 @@
             this.groupBox2.Size = new System.Drawing.Size(950, 440);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Visible = false;
             // 
             // UI_SK_CP_SP_Address_lbl
             // 

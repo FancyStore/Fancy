@@ -36,12 +36,14 @@ namespace UI_SK_ShoppingCart
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //UI_SK_MainCart UISKMC = new UI_SK_MainCart();
-            UI_SK_ChoosePay UISKCP = new UI_SK_ChoosePay();
-            UISKCP.Show();
+            UI_SK_MainCart UISKMC = new UI_SK_MainCart();
+            //UI_SK_ChoosePay UISKCP = new UI_SK_ChoosePay();
+            UISKMC.Show();
             this.Hide();
 
         }
+
+        #region 假資料寫入
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -53,8 +55,10 @@ namespace UI_SK_ShoppingCart
                 ProductSizeID = 1,
                 ProductColorName = "一般色",
                 ProductColorID = 1,
-                ProductStockQTY = 20,//Linq First Of Default();
-                ProductOrderQTY = 3
+                ProductStockQTY = 100,//Linq First Of Default();
+                ProductOrderQTY = 3,
+                UnitPrice = 399
+                
             }
             );
 
@@ -66,8 +70,9 @@ namespace UI_SK_ShoppingCart
                 ProductSizeID =4,
                 ProductColorName = "鄉村麥",
                 ProductColorID =7,
-                ProductStockQTY = 30,//Linq First Of Default();
-                ProductOrderQTY = 1
+                ProductStockQTY = 100,//Linq First Of Default();
+                ProductOrderQTY = 1,
+                UnitPrice = 599
             }
             );
 
@@ -79,10 +84,13 @@ namespace UI_SK_ShoppingCart
                 ProductSizeID =5,
                 ProductColorName = "黑色",
                 ProductColorID = 8,
-                ProductStockQTY = 50,//Linq First Of Default();
-                ProductOrderQTY = 5
+                ProductStockQTY = 100,//Linq First Of Default();
+                ProductOrderQTY = 5,
+                UnitPrice = 799
             }
             );
         }
+
+        #endregion 假資料寫入
     }
 }

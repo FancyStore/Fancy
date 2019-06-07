@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.Reflection;
 using Microsoft.CSharp.RuntimeBinder;
 using Microsoft.Office.Tools.Word;
+using Cls_Utility;
+using static Cls_Utility.Cls_SK_NormalClass;
 
 namespace Ctr_Customs
 {
@@ -19,8 +21,25 @@ namespace Ctr_Customs
         public UC_SK_ShoppingItem()
         {
             InitializeComponent();
+            //for (int i = 0; i <= Cls_Utility.Cls_SK_NormalClass.ShoppingList.Count - 1; i++)
+            //{
+
+            //}
+
+            //for (int index = 0; index <= Cls_Utility.Cls_SK_NormalClass.ShoppingList.Count - 1; index++)
+            //{
+            //    indexself = Cls_SK_NormalClass.ShoppingList[index].ToString();
+
+            //}
+
         }
 
+
+        //public string indexself;
+
+        //public int Removei;
+        
+        
 
         #region 設定SK_UC_ShoppingItem GetSet屬性
         public string UC_SK_ShoppingItem_ProductName_linklbl_GetSet
@@ -43,63 +62,91 @@ namespace Ctr_Customs
             set { UC_SK_ShoppingItem_ProductStockQTY_lbl.Text = value.ToString(); }
         }
 
-        public EventArgs UC_SK_ShoppingItem_OrderQTYIncrease_btn_GetSet
-        {
-            set { UC_SK_ShoppingItem_OrderQTYIncrease_btn.Text = value.ToString(); }
-        }
+        //public EventArgs UC_SK_ShoppingItem_OrderQTYIncrease_btn_GetSet
+        //{
+        //    set { UC_SK_ShoppingItem_OrderQTYIncrease_btn.Text = value.ToString(); }
+        //}
 
         public string UC_SK_ShoppingItem_ProductOrderQTY_lbl_GetSet
         {
             set { UC_SK_ShoppingItem_OrderQTY_lbl.Text = value.ToString(); }
         }
 
-        public EventArgs UC_SK_ShoppingItem_OrderQTYReduce_btn_GetSet
-        {
-            set { UC_SK_ShoppingItem_OrderQTYReduce_btn.Text = value.ToString(); }
-        }
+        //public EventArgs UC_SK_ShoppingItem_OrderQTYReduce_btn_GetSet
+        //{
+        //    set { UC_SK_ShoppingItem_OrderQTYReduce_btn.Text = value.ToString(); }
+        //}
 
-        public EventArgs UC_SK_ShoppingItem_RemoveRowOrder_btn_GetSet
+        public int UC_SK_ShoppingItem_RemoveRowOrder_btn_GetSet
         {
+            //set { Removei = value; }
             set { SK_UC_ShoppingItem_RemoveRowOrder_btn.Text = value.ToString(); }
+            
+            
         }
         #endregion //===============================================================
 
-        public static void RemoveAt(int index)
-        {
-            for (int i = 0; i <= Cls_Utility.Cls_SK_NormalClass.ShoppingList.Count - 1; i++)
-            {
-                RemoveAt(i);
-            }
-        }
-        
+        //public static void RemoveAt(int index)
+        //{
+        //    for (int i = 0; i <= Cls_Utility.Cls_SK_NormalClass.ShoppingList.Count - 1; i++)
+        //    {
 
-        
+
+        //    }
+        //}
+
+
+
 
         public void UC_SK_ShoppingItem_OrderQTYIncrease_btn_Click(object sender, EventArgs e)
         {
-            for (int i=0;i<=Cls_Utility.Cls_SK_NormalClass.ShoppingList.Count -1; i++)
+            Cls_SK_NormalClass.UI_SK_MC_QtyANDRemove_InterLock_Increase = true;
+            if (Cls_SK_NormalClass.UI_SK_MC_QtyANDRemove_InterLock_Remove == true)
+            {
+                MessageBox.Show("請先點選更新數量", "System Alarm");
+                return;
+            }
+            for (int i = 0 ; i<=Cls_Utility.Cls_SK_NormalClass.ShoppingList.Count -1; i++)
             {
                 Cls_Utility.Cls_SK_NormalClass.ShoppingList[i].ProductOrderQTY = Cls_Utility.Cls_SK_NormalClass.ShoppingList[i].ProductOrderQTY + 1;
-
-            }
-
-
+               }
         }
 
         public void UC_SK_ShoppingItem_OrderQTYReduce_btn_Click(object sender, EventArgs e)
         {
+            Cls_SK_NormalClass.UI_SK_MC_QtyANDRemove_InterLock_Reduce = true;
+            if (Cls_SK_NormalClass.UI_SK_MC_QtyANDRemove_InterLock_Remove == true)
+            {
+                MessageBox.Show("請先點選更新數量", "System Alarm");
+                return;
+            }
             for (int i=0;i<= Cls_Utility.Cls_SK_NormalClass.ShoppingList.Count - 1; i++)
             {
                 Cls_Utility.Cls_SK_NormalClass.ShoppingList[i].ProductOrderQTY = Cls_Utility.Cls_SK_NormalClass.ShoppingList[i].ProductOrderQTY - 1;
             }
         }
 
-        public void SK_UC_ShoppingItem_RemoveRowOrder_btn_Click(object sender, EventArgs e)
+        UC_SK_ShoppingItem UCSKSIItem;
+        private void SK_UC_ShoppingItem_RemoveRowOrder_btn_Click_1(object sender, EventArgs e)
         {
-            for(int i = 0; i <= Cls_Utility.Cls_SK_NormalClass.ShoppingList.Count - 1; i++)
+            if(Cls_SK_NormalClass.UI_SK_MC_QtyANDRemove_InterLock_Increase == true ||
+                Cls_SK_NormalClass.UI_SK_MC_QtyANDRemove_InterLock_Reduce == true ||
+                Cls_SK_NormalClass.UI_SK_MC_QtyANDRemove_InterLock_Remove == true)
             {
-                RemoveAt(i);
+                MessageBox.Show("請先點選更新數量","System Alarm");
+                return;
             }
+            Cls_SK_NormalClass.UI_SK_MC_QtyANDRemove_InterLock_Remove = true;
+
+            Cls_SK_NormalClass.ShoppingList.RemoveAt(Convert.ToInt32(SK_UC_ShoppingItem_RemoveRowOrder_btn.Text));
+                return;
+            
+
+
+            
         }
     }
 }
+                //UCSKSIItem = new UC_SK_ShoppingItem();
+
+                //UCSKSIItem.UC_SK_ShoppingItem_ProductName_linklbl_GetSet = Cls_SK_NormalClass.ShoppingList[i].ProductName;

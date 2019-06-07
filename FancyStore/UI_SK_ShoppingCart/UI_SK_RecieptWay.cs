@@ -21,22 +21,25 @@ namespace UI_SK_ShoppingCart
         public UI_SK_RecieptWay()
         {
             InitializeComponent();
+            int tempSum;
+            var q = Cls_SK_NormalClass.ShoppingList.Sum(temppay => temppay.SmallSum);
+            tempSum = q;
 
             if (Cls_SK_NormalClass.UI_SK_CP_Way_Bool_RB1 == true)
             {
-                Cls_SK_NormalClass.UI_SK_CP_FinalPay_int = Cls_SK_NormalClass.UI_SK_CP_SmallSum_int + Cls_SK_NormalClass.UI_SK_CP_int1;
+                Cls_SK_NormalClass.UI_SK_CP_FinalPay_int = tempSum + Cls_SK_NormalClass.UI_SK_CP_int1 + Cls_SK_NormalClass.UI_SK_RW_SPfee1_int;
             }
             else if (Cls_SK_NormalClass.UI_SK_CP_Way_Bool_RB2 == true)
             {
-                Cls_SK_NormalClass.UI_SK_CP_FinalPay_int = Cls_SK_NormalClass.UI_SK_CP_SmallSum_int + Cls_SK_NormalClass.UI_SK_CP_int2;
+                Cls_SK_NormalClass.UI_SK_CP_FinalPay_int = tempSum + Cls_SK_NormalClass.UI_SK_CP_int2 + Cls_SK_NormalClass.UI_SK_RW_SPfee2_int;
             }
             else if (Cls_SK_NormalClass.UI_SK_CP_Way_Bool_RB3 == true)
             {
-                Cls_SK_NormalClass.UI_SK_CP_FinalPay_int = Cls_SK_NormalClass.UI_SK_CP_SmallSum_int + Cls_SK_NormalClass.UI_SK_CP_int3;
+                Cls_SK_NormalClass.UI_SK_CP_FinalPay_int = tempSum + Cls_SK_NormalClass.UI_SK_CP_int3 + Cls_SK_NormalClass.UI_SK_RW_SPfee3_int;
             }
             else if (Cls_SK_NormalClass.UI_SK_CP_Way_Bool_RB4 == true)
             {
-                Cls_SK_NormalClass.UI_SK_CP_FinalPay_int = Cls_SK_NormalClass.UI_SK_CP_SmallSum_int + Cls_SK_NormalClass.UI_SK_CP_int4;
+                Cls_SK_NormalClass.UI_SK_CP_FinalPay_int = tempSum + Cls_SK_NormalClass.UI_SK_CP_int4 + Cls_SK_NormalClass.UI_SK_RW_SPfee4_int;
             }
             else
             {
@@ -77,8 +80,55 @@ namespace UI_SK_ShoppingCart
         FancyStoreEntities dbContext_FSE = new FancyStoreEntities();
         //OrderDetail OD = new OrderDetail { OrderDetailID = 1, OrderID = Convert.ToInt32($"GD{DateTime.Now:yyyyMMddHHmmss}{Cls_Utility.Cls_SK_NormalClass.UserID}"), ProductID = Cls_Utility.Cls_SK_NormalClass.ShoppingList[i].ProductID, ProductColorID = Cls_Utility.Cls_SK_NormalClass.ShoppingList[i].ProductColorID, ProductSizeID = Cls_Utility.Cls_SK_NormalClass.ShoppingList[i].ProductSizeID, UnitPrice = Cls_Utility.Cls_SK_NormalClass.ShoppingList[i].UnitPrice, OrderQTY = Cls_Utility.Cls_SK_NormalClass.ShoppingList[i].ProductOrderQTY, CreateDate = DateTime.Now };
         //FancyStoreEntities dbContext_FSE = new FancyStoreEntities();
+
+        #region 參數寫入 OrderDetail, OrderHeader, 庫存檢查
+
+        int tempQTY_SearchStockQTY;
+        int tempQTY_WriteToSQL;
+        int j;
         private void UI_SK_RW_BornOrder_Click(object sender, EventArgs e)
         {
+            bool UI_SK_MC_OrderQTY_Checker = true;
+            for (int i = 0; i <= Cls_SK_NormalClass.ShoppingList.Count - 1; i++)
+            {
+                j = Cls_SK_NormalClass.ShoppingList[i].ProductID;
+                var q = dbContext_FSE.ProductStocks
+                    .Where(ps => ps.ProductID == j)
+                    .Select(ps => ps.StockQTY).FirstOrDefault();
+                tempQTY_SearchStockQTY = q;
+
+                if (Cls_SK_NormalClass.ShoppingList[i].ProductOrderQTY > q)
+                {
+                    MessageBox.Show("庫存不足，請降低數量", "System Alarm");
+                    UI_SK_MC_OrderQTY_Checker = false;
+                    return;
+                }
+                else
+                {
+                    
+                }
+            }
+
+            for (int i = 0; i <= Cls_SK_NormalClass.ShoppingList.Count - 1; i++)
+            {
+                tempQTY_WriteToSQL = 
+                    tempQTY_SearchStockQTY - Cls_SK_NormalClass.ShoppingList[i].ProductOrderQTY;
+            }
+
+
+            
+
+            using (var dbContext_FSE = new FancyStoreEntities())
+            {
+                var q = (from ps in dbContext_FSE.ProductStocks
+                        where ps.ProductID == j
+                        select ps).FirstOrDefault();
+
+                q.StockQTY = tempQTY_WriteToSQL;
+
+                dbContext_FSE.SaveChanges();
+            }
+
             int id;
                
             //for (int i=0; i<= Cls_Utility.Cls_SK_NormalClass.ShoppingList.Count - 1; i++)
@@ -90,10 +140,10 @@ namespace UI_SK_ShoppingCart
                     OrderNum = $"GD{DateTime.Now:yyyyMMddHHmmss}{Cls_Utility.Cls_SK_NormalClass.UserID}"
                     ,
                     OrderDate = Convert.ToDateTime(DateTime.Now.ToShortDateString()),
-                    ShipDate = Convert.ToDateTime(DateTime.Now.ToShortDateString()),
+                    ShipDate = Convert.ToDateTime(DateTime.Now.AddDays(15).ToShortDateString()),
                     UserID = 1,
                     PayMethodID = Cls_SK_NormalClass.UI_SK_CP_PM_SQL,
-                    ShippingID = Cls_SK_NormalClass.UI_SK_CP_SP_SQL,
+                    ShippingID = 1 /*Cls_SK_NormalClass.UI_SK_CP_SP_SQL*/,
                     DiscountID = 3,
                     OrderStatusID = 1,
                     OrderAmount = Cls_SK_NormalClass.UI_SK_CP_FinalPay_int,
@@ -132,41 +182,35 @@ namespace UI_SK_ShoppingCart
                 }
             }
 
-            using (var dbContext_FSE = new FancyStoreEntities())
-            {
-                Shipping SH = new Shipping
-                {
-                    ShippingName=UI_SK_CP_SP_SentWay_Str,
-                    Phone=UI_SK_CP_SP_Phone_Str,
-                    Fax=UI_SK_CP_SP_Fax_Str,
-                    Email= UI_SK_CP_SP_Email_Str,
-                    Address= UI_SK_CP_SP_Address_Str,
-                    CreateDate= DateTime.Now
-                };
+            #region 寫入shipping
+            //using (var dbContext_FSE = new FancyStoreEntities())
+            //{
+            //    Shipping SH = new Shipping
+            //    {
+            //        ShippingName=UI_SK_CP_SP_SentWay_Str,
+            //        Phone=UI_SK_CP_SP_Phone_Str,
+            //        Fax=UI_SK_CP_SP_Fax_Str,
+            //        Email= UI_SK_CP_SP_Email_Str,
+            //        Address= UI_SK_CP_SP_Address_Str,
+            //        CreateDate= DateTime.Now
+            //    };
 
-                dbContext_FSE.Shippings.Add(SH);
-                dbContext_FSE.SaveChanges();
-            }
+            //    dbContext_FSE.Shippings.Add(SH);
+            //    dbContext_FSE.SaveChanges();
+            //}
+            #endregion 寫入shipping
 
 
-
-            using (var dbContext_FSE = new FancyStoreEntities())
-            {
-                OrderStatusList OLS = new OrderStatusList { /*OrderStatusID = ,*/ OrderStatusName = "預設名" };
-                dbContext_FSE.OrderStatusLists.Add(OLS);
-                dbContext_FSE.SaveChanges();
-
-            }
-
+            
             //}
            
 
           
         }
 
-        private void UI_SK_RW_SP_SentWay_lbl_Click(object sender, EventArgs e)
-        {
+#endregion 參數寫入 OrderDetail, OrderHeader, 庫存檢查
 
-        }
+        
+        
     }
 }

@@ -151,7 +151,7 @@
             this.SK_UC_ShoppingItem_RemoveRowOrder_btn.TabIndex = 2;
             this.SK_UC_ShoppingItem_RemoveRowOrder_btn.Text = "DelRowOrder";
             this.SK_UC_ShoppingItem_RemoveRowOrder_btn.UseVisualStyleBackColor = false;
-            this.SK_UC_ShoppingItem_RemoveRowOrder_btn.Click += new System.EventHandler(this.SK_UC_ShoppingItem_RemoveRowOrder_btn_Click);
+            this.SK_UC_ShoppingItem_RemoveRowOrder_btn.Click += new System.EventHandler(this.SK_UC_ShoppingItem_RemoveRowOrder_btn_Click_1);
             // 
             // UC_SK_ShoppingItem_OrderQTYReduce_btn
             // 
