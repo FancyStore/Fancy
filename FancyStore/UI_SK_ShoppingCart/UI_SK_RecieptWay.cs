@@ -20,6 +20,8 @@ namespace UI_SK_ShoppingCart
         public UI_SK_RecieptWay()
         {
             InitializeComponent();
+
+            #region 應付總價
             int tempSum;
             var q = Cls_SK_NormalClass.ShoppingList.Sum(temppay => temppay.SmallSum);
             tempSum = q;
@@ -44,7 +46,9 @@ namespace UI_SK_ShoppingCart
             {
 
             }
-            
+            #endregion 應付總價
+
+            #region 確認購物內容
             for (int i = 0; i <= Cls_SK_NormalClass.ShoppingList.Count - 1; i++)
             {
                 UCSKSI = new UC_SK_RW_CheckList_Item();
@@ -55,31 +59,23 @@ namespace UI_SK_ShoppingCart
 
                 UCSKSI.UC_SK_RW_CheckItem_ProductColor_lbl_GetSet = Cls_SK_NormalClass.ShoppingList[i].ProductColorName;
 
-                
-
                 UCSKSI.UC_SK_RW_CheckItem_OrderQTY_lbl_GetSet = Cls_SK_NormalClass.ShoppingList[i].ProductOrderQTY.ToString();
 
                 UI_SK_RW_FOPanel1.Controls.Add(UCSKSI);
-
-                //if (Cls_SK_NormalClass.ShoppingList[i].StockID == )
-
-
+                
             }
-
-            UI_SK_RW_SP_Phone_Dynamiclbl.Text = UI_SK_CP_SP_Phone_Str;
-            UI_SK_RW_SP_Fax_Dynamiclbl.Text = UI_SK_CP_SP_Fax_Str;
-            UI_SK_RW_SP_Email_Dynamiclbl.Text = UI_SK_CP_SP_Email_Str;
-            UI_SK_RW_SP_Address_Dynamiclbl.Text = UI_SK_CP_SP_Address_Str;
-            UI_SK_RW_SP_SentWay_Dynamiclbl.Text = UI_SK_CP_SP_SentWay_Str;
+            #endregion 確認購物內容
+            //UI_SK_RW_SP_Phone_Dynamiclbl.Text = UI_SK_CP_SP_Phone_Str;
+            //UI_SK_RW_SP_Fax_Dynamiclbl.Text = UI_SK_CP_SP_Fax_Str;
+            //UI_SK_RW_SP_Email_Dynamiclbl.Text = UI_SK_CP_SP_Email_Str;
+            //UI_SK_RW_SP_Address_Dynamiclbl.Text = UI_SK_CP_SP_Address_Str;
+            //UI_SK_RW_SP_SentWay_Dynamiclbl.Text = UI_SK_CP_SP_SentWay_Str;
 
 
         }
 
 
         FancyStoreEntities dbContext_FSE = new FancyStoreEntities();
-        //OrderDetail OD = new OrderDetail { OrderDetailID = 1, OrderID = Convert.ToInt32($"GD{DateTime.Now:yyyyMMddHHmmss}{Cls_Utility.Cls_SK_NormalClass.UserID}"), ProductID = Cls_Utility.Cls_SK_NormalClass.ShoppingList[i].ProductID, ProductColorID = Cls_Utility.Cls_SK_NormalClass.ShoppingList[i].ProductColorID, ProductSizeID = Cls_Utility.Cls_SK_NormalClass.ShoppingList[i].ProductSizeID, UnitPrice = Cls_Utility.Cls_SK_NormalClass.ShoppingList[i].UnitPrice, OrderQTY = Cls_Utility.Cls_SK_NormalClass.ShoppingList[i].ProductOrderQTY, CreateDate = DateTime.Now };
-        //FancyStoreEntities dbContext_FSE = new FancyStoreEntities();
-
         #region 參數寫入 OrderDetail, OrderHeader, 庫存檢查
 
         int tempQTY_SearchStockQTY;
@@ -129,13 +125,10 @@ namespace UI_SK_ShoppingCart
             }
 
             int id;
-               
-            //for (int i=0; i<= Cls_Utility.Cls_SK_NormalClass.ShoppingList.Count - 1; i++)
-            //{
             using (var dbContext_FSE = new FancyStoreEntities())
             {
                 OrderHeader OH = new OrderHeader
-                { /*OrderID = 1,*/
+                { 
                     OrderNum = $"GD{DateTime.Now:yyyyMMddHHmmss}{Cls_Utility.Cls_SK_NormalClass.UserID}"
                     ,
                     OrderDate = Convert.ToDateTime(DateTime.Now.ToShortDateString()),
@@ -162,8 +155,6 @@ namespace UI_SK_ShoppingCart
             {
                 using (var dbContext_FSE = new FancyStoreEntities())
                 {
-
-                    //Insert OrderDetail資料
                     OrderDetail OD = new OrderDetail
                     { /*OrderDetailID = 1,*/
                         OrderID = id,
@@ -180,6 +171,7 @@ namespace UI_SK_ShoppingCart
 
                 }
             }
+            #endregion 參數寫入 OrderDetail, OrderHeader, 庫存檢查
 
             #region 寫入shipping
             //using (var dbContext_FSE = new FancyStoreEntities())
@@ -200,16 +192,11 @@ namespace UI_SK_ShoppingCart
             #endregion 寫入shipping
 
 
-            
-            //}
-           
-
-          
         }
 
-#endregion 參數寫入 OrderDetail, OrderHeader, 庫存檢查
 
-        
-        
+
+
+
     }
 }

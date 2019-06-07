@@ -73,6 +73,7 @@
             // UC_SK_ShoppingItem_OrderQTY_lbl
             // 
             this.UC_SK_ShoppingItem_OrderQTY_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
+            this.UC_SK_ShoppingItem_OrderQTY_lbl.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.UC_SK_ShoppingItem_OrderQTY_lbl.Location = new System.Drawing.Point(724, 4);
             this.UC_SK_ShoppingItem_OrderQTY_lbl.Margin = new System.Windows.Forms.Padding(1);
             this.UC_SK_ShoppingItem_OrderQTY_lbl.Name = "UC_SK_ShoppingItem_OrderQTY_lbl";
@@ -84,6 +85,7 @@
             // UC_SK_ShoppingItem_ProductColor_lbl
             // 
             this.UC_SK_ShoppingItem_ProductColor_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
+            this.UC_SK_ShoppingItem_ProductColor_lbl.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.UC_SK_ShoppingItem_ProductColor_lbl.Location = new System.Drawing.Point(485, 4);
             this.UC_SK_ShoppingItem_ProductColor_lbl.Margin = new System.Windows.Forms.Padding(1);
             this.UC_SK_ShoppingItem_ProductColor_lbl.Name = "UC_SK_ShoppingItem_ProductColor_lbl";
@@ -95,6 +97,7 @@
             // UC_SK_ShoppingItem_ProductStockQTY_lbl
             // 
             this.UC_SK_ShoppingItem_ProductStockQTY_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
+            this.UC_SK_ShoppingItem_ProductStockQTY_lbl.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.UC_SK_ShoppingItem_ProductStockQTY_lbl.Location = new System.Drawing.Point(613, 4);
             this.UC_SK_ShoppingItem_ProductStockQTY_lbl.Margin = new System.Windows.Forms.Padding(1);
             this.UC_SK_ShoppingItem_ProductStockQTY_lbl.Name = "UC_SK_ShoppingItem_ProductStockQTY_lbl";
@@ -106,6 +109,7 @@
             // UC_SK_ShoppingItem_ProductSize_lbl
             // 
             this.UC_SK_ShoppingItem_ProductSize_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
+            this.UC_SK_ShoppingItem_ProductSize_lbl.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.UC_SK_ShoppingItem_ProductSize_lbl.Location = new System.Drawing.Point(407, 4);
             this.UC_SK_ShoppingItem_ProductSize_lbl.Margin = new System.Windows.Forms.Padding(1);
             this.UC_SK_ShoppingItem_ProductSize_lbl.Name = "UC_SK_ShoppingItem_ProductSize_lbl";
@@ -117,6 +121,7 @@
             // UC_SK_ShoppingItem_ProductName_linklbl
             // 
             this.UC_SK_ShoppingItem_ProductName_linklbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
+            this.UC_SK_ShoppingItem_ProductName_linklbl.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.UC_SK_ShoppingItem_ProductName_linklbl.Location = new System.Drawing.Point(4, 4);
             this.UC_SK_ShoppingItem_ProductName_linklbl.Margin = new System.Windows.Forms.Padding(1);
             this.UC_SK_ShoppingItem_ProductName_linklbl.Name = "UC_SK_ShoppingItem_ProductName_linklbl";
@@ -130,6 +135,7 @@
             // 
             this.UC_SK_ShoppingItem_OrderQTYIncrease_btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.UC_SK_ShoppingItem_OrderQTYIncrease_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
+            this.UC_SK_ShoppingItem_OrderQTYIncrease_btn.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.UC_SK_ShoppingItem_OrderQTYIncrease_btn.Location = new System.Drawing.Point(801, 3);
             this.UC_SK_ShoppingItem_OrderQTYIncrease_btn.Margin = new System.Windows.Forms.Padding(0);
             this.UC_SK_ShoppingItem_OrderQTYIncrease_btn.Name = "UC_SK_ShoppingItem_OrderQTYIncrease_btn";
@@ -144,12 +150,13 @@
             this.SK_UC_ShoppingItem_RemoveRowOrder_btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SK_UC_ShoppingItem_RemoveRowOrder_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
             this.SK_UC_ShoppingItem_RemoveRowOrder_btn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SK_UC_ShoppingItem_RemoveRowOrder_btn.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.SK_UC_ShoppingItem_RemoveRowOrder_btn.Location = new System.Drawing.Point(834, 3);
             this.SK_UC_ShoppingItem_RemoveRowOrder_btn.Margin = new System.Windows.Forms.Padding(0, 0, 12, 0);
             this.SK_UC_ShoppingItem_RemoveRowOrder_btn.Name = "SK_UC_ShoppingItem_RemoveRowOrder_btn";
             this.SK_UC_ShoppingItem_RemoveRowOrder_btn.Size = new System.Drawing.Size(71, 69);
             this.SK_UC_ShoppingItem_RemoveRowOrder_btn.TabIndex = 2;
-            this.SK_UC_ShoppingItem_RemoveRowOrder_btn.Text = "DelRowOrder";
+            this.SK_UC_ShoppingItem_RemoveRowOrder_btn.Text = "移除項目";
             this.SK_UC_ShoppingItem_RemoveRowOrder_btn.UseVisualStyleBackColor = false;
             this.SK_UC_ShoppingItem_RemoveRowOrder_btn.Click += new System.EventHandler(this.SK_UC_ShoppingItem_RemoveRowOrder_btn_Click_1);
             // 
@@ -157,6 +164,7 @@
             // 
             this.UC_SK_ShoppingItem_OrderQTYReduce_btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.UC_SK_ShoppingItem_OrderQTYReduce_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(184)))), ((int)(((byte)(162)))));
+            this.UC_SK_ShoppingItem_OrderQTYReduce_btn.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.UC_SK_ShoppingItem_OrderQTYReduce_btn.Location = new System.Drawing.Point(690, 3);
             this.UC_SK_ShoppingItem_OrderQTYReduce_btn.Margin = new System.Windows.Forms.Padding(0);
             this.UC_SK_ShoppingItem_OrderQTYReduce_btn.Name = "UC_SK_ShoppingItem_OrderQTYReduce_btn";

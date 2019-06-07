@@ -22,23 +22,21 @@ namespace UI_SK_ShoppingCart
         {
             InitializeComponent();
 
-            //var resultList = from n in Cls_Utility.Cls_SK_NormalClass.ShoppingList
-            //                 select new { SubAmount = n.UnitPrice * n.ProductOrderQTY };
-            //Cls_Utility.Cls_SK_NormalClass.UI_SK_CP_SmallSum_int = resultList.Sum(x => x.SubAmount);
-            
+            #region 小計
             for (int i =0;i<=Cls_SK_NormalClass.ShoppingList.Count - 1; i++)
             {
                 Cls_SK_NormalClass.ShoppingList[i].SmallSum = Cls_SK_NormalClass.ShoppingList[i].ProductOrderQTY
                     * Cls_SK_NormalClass.ShoppingList[i].UnitPrice;
-
             }
-           
+            #endregion 小計
         }
 
 
 
 
         FancyStoreEntities dbContext_FSE = new FancyStoreEntities();
+
+        #region 付款方式顯示 LINQ
         internal void UI_SK_ChoosePay_Load(object sender, EventArgs e)
         {
              
@@ -125,7 +123,9 @@ namespace UI_SK_ShoppingCart
 
 
         }
+        #endregion 付款方式顯示 LINQ
 
+        #region 付款方式 Check
         RadioButton RB_PayMethon;
         internal void UI_SK_CP_PM_Name1_lbl_CheckedChanged(object sender, EventArgs e)
         {
@@ -168,18 +168,10 @@ namespace UI_SK_ShoppingCart
             Cls_SK_NormalClass.UI_SK_CP_PM_SQL = dbContext_FSE.Shippings.Where(sh => sh.ShippingID == 4).Select(sh => sh.ShippingID).FirstOrDefault();
         }
 
+        #endregion 付款方式 Check
+
         private void button1_Click(object sender, EventArgs e)
         {
-            //if (UI_SK_CP_PM_Name1_lbl.Checked || UI_SK_CP_PM_Name2_lbl.Checked || 
-            //    UI_SK_CP_PM_Name3_lbl.Checked || UI_SK_CP_PM_Name4_lbl.Checked)
-            //RBOX_Test_lbl.Text = RB_PayMethon.Text;
-            //else
-            //{
-
-            //}
-
-           
-
             
         }
 

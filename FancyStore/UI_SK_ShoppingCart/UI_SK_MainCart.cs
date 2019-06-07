@@ -23,12 +23,10 @@ namespace UI_SK_ShoppingCart
         public UI_SK_MainCart()
         {
             InitializeComponent();
-
+            #region 初次顯示
             Cls_SK_NormalClass.FW = UI_SK_MC_ProductFlowPanel;
             for (int index = 0; index <= Cls_Utility.Cls_SK_NormalClass.ShoppingList.Count - 1; index++)
             {
-                //Cls_SK_NormalClass.indexself = Cls_SK_NormalClass.ShoppingList[index].ToString();
-
                 Cls_SK_NormalClass.indexself = index;
 
                 UCSKSI = new UC_SK_ShoppingItem();
@@ -39,25 +37,22 @@ namespace UI_SK_ShoppingCart
 
                 UCSKSI.UC_SK_ShoppingItem_ProductColor_lbl_GetSet = Cls_SK_NormalClass.ShoppingList[index].ProductColorName;
 
-
                 UCSKSI.UC_SK_ShoppingItem_ProductStockQTY_lbl_GetSet = Cls_SK_NormalClass.ShoppingList[index].ProductStockQTY.ToString();
 
                 UCSKSI.UC_SK_ShoppingItem_ProductOrderQTY_lbl_GetSet = Cls_SK_NormalClass.ShoppingList[index].ProductOrderQTY.ToString();
 
-                //UCSKSI.UC_SK_ShoppingItem_RemoveRowOrder_btn_GetSet = (Cls_SK_NormalClass.ShoppingList[index]).ToString();
-
                 UCSKSI.UC_SK_ShoppingItem_RemoveRowOrder_btn_GetSet = Cls_SK_NormalClass.indexself;
 
                 UI_SK_MC_ProductFlowPanel.Controls.Add(UCSKSI);
-
-
             }
+            #endregion 初次顯示
         }
 
-        
+
 
         FancyStoreEntities dbContext_FSE = new FancyStoreEntities();
 
+        #region 第一次庫存檢查
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -85,11 +80,11 @@ namespace UI_SK_ShoppingCart
             UISKCP.Show();
             this.Hide();
         }
+        #endregion 第一次庫存檢查
 
-        
-        
 
-        
+
+
         public void UI_SK_MainCart_Load(object sender, EventArgs e)
         {
             
