@@ -72,11 +72,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_ShoppingCartTitle_ProductName_lbl, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.SK_UC_ShoppingCartTitle_ProductColor_lbl, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_ShoppingCartTitle_ProductSize_lbl, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_ShoppingCartTitle_ProductOrderQTY_lbl, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_ShoppingCartTitle_RemoveRowOrder_lbl, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.SK_UC_ShoppingCartTitle_ProductStockQTY_lbl, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.SK_UC_ShoppingCartTitle_ProductColor_lbl, 2, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;

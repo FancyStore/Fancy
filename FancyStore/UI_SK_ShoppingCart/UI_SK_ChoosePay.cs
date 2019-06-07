@@ -52,14 +52,14 @@ namespace UI_SK_ShoppingCart
             var UI_SK_CP_SP1_Var = dbContext_FSE.Shippings
                                                .Where(pm => pm.ShippingID == 1)
                                                .Select(pm => pm.ShippingName).FirstOrDefault();
-            UI_SK_CP_SP1_lbl.Text = UI_SK_CP_SP1_Var.ToString();
+            //UI_SK_CP_SP1_lbl.Text = UI_SK_CP_SP1_Var.ToString();
             //==============================================================
 
 
             //UI_SK_CP_PM_Name2_lbl 付款方式 (從資料庫提取)
             var UI_SK_CP_PM_Name2_Var = dbContext_FSE.PayMethods
                                         .Where(pm => (pm.PayMethodID == 2))
-                                        .Select(pm => (pm.PayMethodName)).FirstOrDefault() + "NT";
+                                        .Select(pm => (pm.PayMethodName)).FirstOrDefault();
             UI_SK_CP_PM_Name2_lbl.Text = UI_SK_CP_PM_Name2_Var.ToString();
             //UI_SK_CP_int2 = Convert.ToInt32(UI_SK_CP_PM_Name2_Var);
 
@@ -71,7 +71,7 @@ namespace UI_SK_ShoppingCart
             var UI_SK_CP_SP2_Var = dbContext_FSE.Shippings
                                                .Where(pm => pm.ShippingID == 2)
                                                .Select(pm => pm.ShippingName).FirstOrDefault();
-            UI_SK_CP_SP2_lbl.Text = UI_SK_CP_SP2_Var.ToString();
+            //UI_SK_CP_SP2_lbl.Text = UI_SK_CP_SP2_Var.ToString();
             //==============================================================
 
 
@@ -90,7 +90,7 @@ namespace UI_SK_ShoppingCart
             var UI_SK_CP_SP3_Var = dbContext_FSE.Shippings
                                                .Where(pm => pm.ShippingID == 3)
                                                .Select(pm => pm.ShippingName).FirstOrDefault();
-            UI_SK_CP_SP3_lbl.Text = UI_SK_CP_SP3_Var.ToString();
+            //UI_SK_CP_SP3_lbl.Text = UI_SK_CP_SP3_Var.ToString();
             //==============================================================
 
 
@@ -109,7 +109,7 @@ namespace UI_SK_ShoppingCart
             var UI_SK_CP_SP4_Var = dbContext_FSE.Shippings
                                                .Where(pm => pm.ShippingID == 4)
                                                .Select(pm => pm.ShippingName).FirstOrDefault();
-            UI_SK_CP_SP4_lbl.Text = UI_SK_CP_SP4_Var.ToString();
+            //UI_SK_CP_SP4_lbl.Text = UI_SK_CP_SP4_Var.ToString();
             //==============================================================
 
 
@@ -168,51 +168,82 @@ namespace UI_SK_ShoppingCart
 
            
 
+            
+        }
+
+        //RadioButton RB_Shipping;
+
+        //private void UI_SK_CP_SP1_lbl_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (UI_SK_CP_SP1_lbl.Checked) RB_Shipping = UI_SK_CP_SP1_lbl;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB1 = true;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB2 = false;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB3 = false;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB4 = false;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_SQL = 1;
+        //}
+
+        //private void UI_SK_CP_SP2_lbl_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (UI_SK_CP_SP2_lbl.Checked) RB_Shipping = UI_SK_CP_SP2_lbl;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB1 = false;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB2 = true;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB3 = false;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB4 = false;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_SQL = 2;
+        //}
+
+        //private void UI_SK_CP_SP3_lbl_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (UI_SK_CP_SP3_lbl.Checked) RB_Shipping = UI_SK_CP_SP3_lbl;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB1 = false;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB2 = false;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB3 = true;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB4 = false;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_SQL = 3;
+        //}
+
+        //private void UI_SK_CP_SP4_lbl_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (UI_SK_CP_SP4_lbl.Checked) RB_Shipping = UI_SK_CP_SP4_lbl;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB1 = false;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB2 = false;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB3 = false;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB4 = true;
+        //    Cls_SK_NormalClass.UI_SK_CP_SP_SQL = 4;
+        //}
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show(UI_SK_CP_SP_SentWay_combobox.Items[1].ToString());
+            UI_SK_CP_SP_Phone_Str = UI_SK_CP_SP_Phone_txtbox.Text;
+            UI_SK_CP_SP_Fax_Str = UI_SK_CP_SP_Fax_txtbox.Text;
+            UI_SK_CP_SP_Email_Str = UI_SK_CP_SP_Email_txtbox.Text;
+            UI_SK_CP_SP_Address_Str = UI_SK_CP_SP_Address_txtbox.Text;
+            if(UI_SK_CP_SP_SentWay_combobox.Items[0].ToString() == "宅急便")
+            {
+                UI_SK_CP_SP_SentWay_Str = "宅急便";
+                Cls_SK_NormalClass.UI_SK_CP_SP_SQL = 1;
+            }
+            else if (UI_SK_CP_SP_SentWay_combobox.Items[1].ToString() == "商店店到店")
+            {
+                UI_SK_CP_SP_SentWay_Str = "商店店到店";
+                Cls_SK_NormalClass.UI_SK_CP_SP_SQL = 2;
+            }
+            else if (UI_SK_CP_SP_SentWay_combobox.Items[2].ToString() == "EMS")
+            {
+                UI_SK_CP_SP_SentWay_Str = "EMS";
+                Cls_SK_NormalClass.UI_SK_CP_SP_SQL = 3;
+            }
+            else if (UI_SK_CP_SP_SentWay_combobox.Items[3].ToString() == "好運")
+            {
+                UI_SK_CP_SP_SentWay_Str = "好運";
+                Cls_SK_NormalClass.UI_SK_CP_SP_SQL = 4;
+            }
+
             UI_SK_RecieptWay UISKRW = new UI_SK_RecieptWay();
             UISKRW.Show();
             this.Hide();
-        }
-
-        RadioButton RB_Shipping;
-
-        private void UI_SK_CP_SP1_lbl_CheckedChanged(object sender, EventArgs e)
-        {
-            if (UI_SK_CP_SP1_lbl.Checked) RB_Shipping = UI_SK_CP_SP1_lbl;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB1 = true;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB2 = false;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB3 = false;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB4 = false;
-            Cls_SK_NormalClass.UI_SK_CP_SP_SQL = 1;
-        }
-
-        private void UI_SK_CP_SP2_lbl_CheckedChanged(object sender, EventArgs e)
-        {
-            if (UI_SK_CP_SP2_lbl.Checked) RB_Shipping = UI_SK_CP_SP2_lbl;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB1 = false;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB2 = true;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB3 = false;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB4 = false;
-            Cls_SK_NormalClass.UI_SK_CP_SP_SQL = 2;
-        }
-
-        private void UI_SK_CP_SP3_lbl_CheckedChanged(object sender, EventArgs e)
-        {
-            if (UI_SK_CP_SP3_lbl.Checked) RB_Shipping = UI_SK_CP_SP3_lbl;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB1 = false;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB2 = false;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB3 = true;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB4 = false;
-            Cls_SK_NormalClass.UI_SK_CP_SP_SQL = 3;
-        }
-
-        private void UI_SK_CP_SP4_lbl_CheckedChanged(object sender, EventArgs e)
-        {
-            if (UI_SK_CP_SP4_lbl.Checked) RB_Shipping = UI_SK_CP_SP4_lbl;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB1 = false;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB2 = false;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB3 = false;
-            Cls_SK_NormalClass.UI_SK_CP_SP_Bool_RB4 = true;
-            Cls_SK_NormalClass.UI_SK_CP_SP_SQL = 4;
         }
     }
 }

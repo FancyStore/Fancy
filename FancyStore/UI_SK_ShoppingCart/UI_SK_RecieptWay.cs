@@ -10,11 +10,14 @@ using System.Windows.Forms;
 using DB_Fancy;
 using Cls_Utility;
 using static Cls_Utility.Cls_SK_NormalClass;
+using Ctr_Customs;
+using Cls_Utility;
 
 namespace UI_SK_ShoppingCart
 {
     public partial class UI_SK_RecieptWay : UI_SK_MotherForm
     {
+        UC_SK_RW_CheckList_Item UCSKSI;
         public UI_SK_RecieptWay()
         {
             InitializeComponent();
@@ -37,6 +40,27 @@ namespace UI_SK_ShoppingCart
             }
             else
             {
+
+            }
+            
+            for (int i = 0; i <= Cls_SK_NormalClass.ShoppingList.Count - 1; i++)
+            {
+                UCSKSI = new UC_SK_RW_CheckList_Item();
+
+                UCSKSI.UC_SK_RW_CheckItem_ProductName_linklbl_GetSet = Cls_SK_NormalClass.ShoppingList[i].ProductName;
+
+                UCSKSI.UC_SK_RW_CheckItem_ProductSize_lbl_GetSet = Cls_SK_NormalClass.ShoppingList[i].ProductSizeName;
+
+                UCSKSI.UC_SK_RW_CheckItem_ProductColor_lbl_GetSet = Cls_SK_NormalClass.ShoppingList[i].ProductColorName;
+
+                
+
+                UCSKSI.UC_SK_RW_CheckItem_OrderQTY_lbl_GetSet = Cls_SK_NormalClass.ShoppingList[i].ProductOrderQTY.ToString();
+
+                UI_SK_RW_FOPanel1.Controls.Add(UCSKSI);
+
+                //if (Cls_SK_NormalClass.ShoppingList[i].StockID == )
+
 
             }
 
@@ -102,15 +126,31 @@ namespace UI_SK_ShoppingCart
                 }
             }
 
+            using (var dbContext_FSE = new FancyStoreEntities())
+            {
+                Shipping SH = new Shipping
+                {
+                    ShippingName=UI_SK_CP_SP_SentWay_Str,
+                    Phone=UI_SK_CP_SP_Phone_Str,
+                    Fax=UI_SK_CP_SP_Fax_Str,
+                    Email= UI_SK_CP_SP_Email_Str,
+                    Address= UI_SK_CP_SP_Address_Str,
+                    CreateDate= DateTime.Now
+                };
+
+                dbContext_FSE.Shippings.Add(SH);
+                dbContext_FSE.SaveChanges();
+            }
+
 
 
             using (var dbContext_FSE = new FancyStoreEntities())
-                {
-                    OrderStatusList OLS = new OrderStatusList { /*OrderStatusID = ,*/ OrderStatusName ="預設名"};
-                    dbContext_FSE.OrderStatusLists.Add(OLS);
-                    dbContext_FSE.SaveChanges();
+            {
+                OrderStatusList OLS = new OrderStatusList { /*OrderStatusID = ,*/ OrderStatusName = "預設名" };
+                dbContext_FSE.OrderStatusLists.Add(OLS);
+                dbContext_FSE.SaveChanges();
 
-                }
+            }
 
             //}
            

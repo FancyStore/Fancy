@@ -124,7 +124,7 @@
       <Name>Cls_Utility</Name>
     </ProjectReference>
     <ProjectReference Include="..\Ctr_Customs\Ctr_Customs.csproj">
-      <Project>{A9DCCDD6-AED2-451A-8CC6-9EA7F627CEC3}</Project>
+      <Project>{a9dccdd6-aed2-451a-8cc6-9ea7f627cec3}</Project>
       <Name>Ctr_Customs</Name>
     </ProjectReference>
     <ProjectReference Include="..\DB_Fancy\DB_Fancy.csproj">

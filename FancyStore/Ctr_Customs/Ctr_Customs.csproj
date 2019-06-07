@@ -59,6 +59,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UC_SK_RW_CheckList_Item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SK_RW_CheckList_Item.Designer.cs">
+      <DependentUpon>UC_SK_RW_CheckList_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SK_RW_CheckList_Title.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SK_RW_CheckList_Title.Designer.cs">
+      <DependentUpon>UC_SK_RW_CheckList_Title.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_SK_ShoppingItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -81,6 +93,12 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SK_RW_CheckList_Item.resx">
+      <DependentUpon>UC_SK_RW_CheckList_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SK_RW_CheckList_Title.resx">
+      <DependentUpon>UC_SK_RW_CheckList_Title.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_SK_ShoppingItem.resx">
       <DependentUpon>UC_SK_ShoppingItem.cs</DependentUpon>
