@@ -21,25 +21,8 @@ namespace Ctr_Customs
         public UC_SK_ShoppingItem()
         {
             InitializeComponent();
-            //for (int i = 0; i <= Cls_Utility.Cls_SK_NormalClass.ShoppingList.Count - 1; i++)
-            //{
-
-            //}
-
-            //for (int index = 0; index <= Cls_Utility.Cls_SK_NormalClass.ShoppingList.Count - 1; index++)
-            //{
-            //    indexself = Cls_SK_NormalClass.ShoppingList[index].ToString();
-
-            //}
-
+            
         }
-
-
-        //public string indexself;
-
-        //public int Removei;
-        
-        
 
         #region 設定SK_UC_ShoppingItem GetSet屬性
         public string UC_SK_ShoppingItem_ProductName_linklbl_GetSet
@@ -80,23 +63,9 @@ namespace Ctr_Customs
         public int UC_SK_ShoppingItem_RemoveRowOrder_btn_GetSet
         {
             //set { Removei = value; }
-            set { SK_UC_ShoppingItem_RemoveRowOrder_btn.Text = value.ToString(); }
-            
-            
+            set { SK_UC_ShoppingItem_RemoveRowOrder_btn.Tag = value.ToString(); }
         }
         #endregion //===============================================================
-
-        //public static void RemoveAt(int index)
-        //{
-        //    for (int i = 0; i <= Cls_Utility.Cls_SK_NormalClass.ShoppingList.Count - 1; i++)
-        //    {
-
-
-        //    }
-        //}
-
-
-
 
         public void UC_SK_ShoppingItem_OrderQTYIncrease_btn_Click(object sender, EventArgs e)
         {
@@ -138,15 +107,9 @@ namespace Ctr_Customs
             }
             Cls_SK_NormalClass.UI_SK_MC_QtyANDRemove_InterLock_Remove = true;
 
-            Cls_SK_NormalClass.ShoppingList.RemoveAt(Convert.ToInt32(SK_UC_ShoppingItem_RemoveRowOrder_btn.Text));
-                return;
-            
-
-
-            
+            Cls_SK_NormalClass.ShoppingList.RemoveAt(Convert.ToInt32(SK_UC_ShoppingItem_RemoveRowOrder_btn.Tag));
+            return;
         }
     }
 }
-                //UCSKSIItem = new UC_SK_ShoppingItem();
-
-                //UCSKSIItem.UC_SK_ShoppingItem_ProductName_linklbl_GetSet = Cls_SK_NormalClass.ShoppingList[i].ProductName;
+               

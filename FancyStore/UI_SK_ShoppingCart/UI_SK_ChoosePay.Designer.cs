@@ -39,7 +39,6 @@
             this.UI_SK_CP_PM_ShippingFee2_lbl = new System.Windows.Forms.Label();
             this.UI_SK_CP_PM_ShippingFee1_lbl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.RBOX_Test_lbl = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.UI_SK_CP_SP_Address_lbl = new System.Windows.Forms.Label();
@@ -187,15 +186,6 @@
             this.button1.Text = "進入最後確認";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // RBOX_Test_lbl
-            // 
-            this.RBOX_Test_lbl.AutoSize = true;
-            this.RBOX_Test_lbl.Location = new System.Drawing.Point(470, 870);
-            this.RBOX_Test_lbl.Name = "RBOX_Test_lbl";
-            this.RBOX_Test_lbl.Size = new System.Drawing.Size(108, 18);
-            this.RBOX_Test_lbl.TabIndex = 7;
-            this.RBOX_Test_lbl.Text = "RBOX測試lbl";
             // 
             // groupBox1
             // 
@@ -380,7 +370,6 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.RBOX_Test_lbl);
             this.Controls.Add(this.UI_SK_CP_GroupBox1);
             this.Controls.Add(this.groupBox2);
             this.Name = "UI_SK_ChoosePay";
@@ -388,7 +377,6 @@
             this.Load += new System.EventHandler(this.UI_SK_ChoosePay_Load);
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.UI_SK_CP_GroupBox1, 0);
-            this.Controls.SetChildIndex(this.RBOX_Test_lbl, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.button3, 0);
@@ -401,7 +389,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -417,7 +404,6 @@
         private System.Windows.Forms.Label UI_SK_CP_PM_ShippingFee1_lbl;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox UI_SK_CP_GRPBOX_PayMethon;
-        private System.Windows.Forms.Label RBOX_Test_lbl;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label UI_SK_CP_SP_Address_lbl;

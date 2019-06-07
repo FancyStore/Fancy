@@ -11,7 +11,6 @@ using DB_Fancy;
 using Cls_Utility;
 using static Cls_Utility.Cls_SK_NormalClass;
 using Ctr_Customs;
-using Cls_Utility;
 
 namespace UI_SK_ShoppingCart
 {
