@@ -25,7 +25,7 @@ namespace UI_SK_ShoppingCart
             var resultList = from n in Cls_Utility.Cls_SK_NormalClass.ShoppingList
                              select new { SubAmount = n.UnitPrice * n.ProductOrderQTY };
             Cls_Utility.Cls_SK_NormalClass.UI_SK_CP_SmallSum_int = resultList.Sum(x => x.SubAmount);
-            
+           
         }
 
 
@@ -34,7 +34,7 @@ namespace UI_SK_ShoppingCart
         FancyStoreEntities dbContext_FSE = new FancyStoreEntities();
         internal void UI_SK_ChoosePay_Load(object sender, EventArgs e)
         {
-            
+             UI_SK_CP_SP_SentWay_combobox.SelectedIndex = 0;
 
             //FirstOrDefault(); 取出序列的第一筆資料,若無資料則回傳 Default
             //UI_SK_CP_PM_Name1_lbl 付款方式 (從資料庫提取),
@@ -215,11 +215,62 @@ namespace UI_SK_ShoppingCart
 
         private void button3_Click(object sender, EventArgs e)
         {
+
+
             //MessageBox.Show(UI_SK_CP_SP_SentWay_combobox.Items[1].ToString());
             UI_SK_CP_SP_Phone_Str = UI_SK_CP_SP_Phone_txtbox.Text;
             UI_SK_CP_SP_Fax_Str = UI_SK_CP_SP_Fax_txtbox.Text;
             UI_SK_CP_SP_Email_Str = UI_SK_CP_SP_Email_txtbox.Text;
             UI_SK_CP_SP_Address_Str = UI_SK_CP_SP_Address_txtbox.Text;
+
+
+            if(UI_SK_CP_SP_Phone_txtbox.Text == "")
+            {
+                MessageBox.Show("請輸入行動電話號碼","System Alarm");
+                return;
+            }
+            else if (UI_SK_CP_SP_Fax_txtbox.Text == "")
+            {
+                var result = MessageBox.Show("是否不輸入傳真號碼", "System Alarm",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    if(UI_SK_CP_SP_Phone_txtbox.Text == "")
+                    {
+                        MessageBox.Show("請輸入行動電話號碼", "System Alarm");
+                        return;
+                    }
+                    else if (UI_SK_CP_SP_Email_txtbox.Text == "")
+                    {
+                        MessageBox.Show("請輸入電子郵件", "System Alarm");
+                        return;
+                    }
+                    else if(UI_SK_CP_SP_Address_txtbox.Text == "")
+                    {
+                        MessageBox.Show("請輸入配送地址", "System Alarm");
+                        return;
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else if (result == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            else if (UI_SK_CP_SP_Email_txtbox.Text == "")
+            {
+                MessageBox.Show("請輸入電子郵件", "System Alarm");
+                return;
+            }
+            else if (UI_SK_CP_SP_Address_txtbox.Text == "")
+            {
+                MessageBox.Show("請輸入配送地址", "System Alarm");
+                return;
+            }
+
+
             if(UI_SK_CP_SP_SentWay_combobox.Items[0].ToString() == "宅急便")
             {
                 UI_SK_CP_SP_SentWay_Str = "宅急便";

@@ -42,28 +42,26 @@
             this.RBOX_Test_lbl = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.UI_SK_CP_SP_Address_lbl = new System.Windows.Forms.Label();
+            this.UI_SK_CP_SP_Email_lbl = new System.Windows.Forms.Label();
+            this.UI_SK_CP_SP_Fax_lbl = new System.Windows.Forms.Label();
+            this.UI_SK_CP_SP_Phone_lbl = new System.Windows.Forms.Label();
+            this.UI_SK_CP_SP_SentWay_combobox = new System.Windows.Forms.ComboBox();
+            this.UI_SK_CP_SP_Address_txtbox = new System.Windows.Forms.TextBox();
+            this.UI_SK_CP_SP_Email_txtbox = new System.Windows.Forms.TextBox();
+            this.UI_SK_CP_SP_Fax_txtbox = new System.Windows.Forms.TextBox();
+            this.UI_SK_CP_SP_Phone_txtbox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.UI_SK_CP_SP_Phone_txtbox = new System.Windows.Forms.TextBox();
-            this.UI_SK_CP_SP_Fax_txtbox = new System.Windows.Forms.TextBox();
-            this.UI_SK_CP_SP_Email_txtbox = new System.Windows.Forms.TextBox();
-            this.UI_SK_CP_SP_Address_txtbox = new System.Windows.Forms.TextBox();
-            this.UI_SK_CP_SP_SentWay_combobox = new System.Windows.Forms.ComboBox();
-            this.UI_SK_CP_SP_Phone_lbl = new System.Windows.Forms.Label();
-            this.UI_SK_CP_SP_Fax_lbl = new System.Windows.Forms.Label();
-            this.UI_SK_CP_SP_Email_lbl = new System.Windows.Forms.Label();
-            this.UI_SK_CP_SP_Address_lbl = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.UI_SK_CP_SP4_lbl = new System.Windows.Forms.RadioButton();
             this.UI_SK_CP_GroupBox1.SuspendLayout();
             this.UI_SK_CP_GRPBOX_PayMethon.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // UI_SK_CP_PM_Name1_lbl
@@ -201,7 +199,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.UI_SK_CP_SP4_lbl);
             this.groupBox1.Location = new System.Drawing.Point(610, 106);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(340, 330);
@@ -226,27 +223,87 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             // 
-            // panel2
+            // UI_SK_CP_SP_Address_lbl
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(171)))), ((int)(((byte)(143)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 45);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(950, 60);
-            this.panel2.TabIndex = 10;
+            this.UI_SK_CP_SP_Address_lbl.Font = new System.Drawing.Font("微軟正黑體", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.UI_SK_CP_SP_Address_lbl.Location = new System.Drawing.Point(20, 320);
+            this.UI_SK_CP_SP_Address_lbl.Name = "UI_SK_CP_SP_Address_lbl";
+            this.UI_SK_CP_SP_Address_lbl.Size = new System.Drawing.Size(200, 50);
+            this.UI_SK_CP_SP_Address_lbl.TabIndex = 14;
+            this.UI_SK_CP_SP_Address_lbl.Text = "送貨地址：";
+            this.UI_SK_CP_SP_Address_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // UI_SK_CP_SP_Email_lbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(164, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 45);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "選擇付款方式";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UI_SK_CP_SP_Email_lbl.Font = new System.Drawing.Font("微軟正黑體", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.UI_SK_CP_SP_Email_lbl.Location = new System.Drawing.Point(20, 250);
+            this.UI_SK_CP_SP_Email_lbl.Name = "UI_SK_CP_SP_Email_lbl";
+            this.UI_SK_CP_SP_Email_lbl.Size = new System.Drawing.Size(200, 50);
+            this.UI_SK_CP_SP_Email_lbl.TabIndex = 14;
+            this.UI_SK_CP_SP_Email_lbl.Text = "電子郵件：";
+            this.UI_SK_CP_SP_Email_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // UI_SK_CP_SP_Fax_lbl
+            // 
+            this.UI_SK_CP_SP_Fax_lbl.Font = new System.Drawing.Font("微軟正黑體", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.UI_SK_CP_SP_Fax_lbl.Location = new System.Drawing.Point(20, 180);
+            this.UI_SK_CP_SP_Fax_lbl.Name = "UI_SK_CP_SP_Fax_lbl";
+            this.UI_SK_CP_SP_Fax_lbl.Size = new System.Drawing.Size(200, 50);
+            this.UI_SK_CP_SP_Fax_lbl.TabIndex = 14;
+            this.UI_SK_CP_SP_Fax_lbl.Text = "傳真號碼：";
+            this.UI_SK_CP_SP_Fax_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // UI_SK_CP_SP_Phone_lbl
+            // 
+            this.UI_SK_CP_SP_Phone_lbl.Font = new System.Drawing.Font("微軟正黑體", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.UI_SK_CP_SP_Phone_lbl.Location = new System.Drawing.Point(20, 110);
+            this.UI_SK_CP_SP_Phone_lbl.Name = "UI_SK_CP_SP_Phone_lbl";
+            this.UI_SK_CP_SP_Phone_lbl.Size = new System.Drawing.Size(200, 50);
+            this.UI_SK_CP_SP_Phone_lbl.TabIndex = 14;
+            this.UI_SK_CP_SP_Phone_lbl.Text = "行動電話：";
+            this.UI_SK_CP_SP_Phone_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // UI_SK_CP_SP_SentWay_combobox
+            // 
+            this.UI_SK_CP_SP_SentWay_combobox.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.UI_SK_CP_SP_SentWay_combobox.FormattingEnabled = true;
+            this.UI_SK_CP_SP_SentWay_combobox.Items.AddRange(new object[] {
+            "宅急便",
+            "商店店到店",
+            "EMS",
+            "好運"});
+            this.UI_SK_CP_SP_SentWay_combobox.Location = new System.Drawing.Point(640, 120);
+            this.UI_SK_CP_SP_SentWay_combobox.Name = "UI_SK_CP_SP_SentWay_combobox";
+            this.UI_SK_CP_SP_SentWay_combobox.Size = new System.Drawing.Size(210, 31);
+            this.UI_SK_CP_SP_SentWay_combobox.TabIndex = 0;
+            // 
+            // UI_SK_CP_SP_Address_txtbox
+            // 
+            this.UI_SK_CP_SP_Address_txtbox.Location = new System.Drawing.Point(220, 330);
+            this.UI_SK_CP_SP_Address_txtbox.Name = "UI_SK_CP_SP_Address_txtbox";
+            this.UI_SK_CP_SP_Address_txtbox.Size = new System.Drawing.Size(260, 29);
+            this.UI_SK_CP_SP_Address_txtbox.TabIndex = 12;
+            // 
+            // UI_SK_CP_SP_Email_txtbox
+            // 
+            this.UI_SK_CP_SP_Email_txtbox.Location = new System.Drawing.Point(220, 260);
+            this.UI_SK_CP_SP_Email_txtbox.Name = "UI_SK_CP_SP_Email_txtbox";
+            this.UI_SK_CP_SP_Email_txtbox.Size = new System.Drawing.Size(260, 29);
+            this.UI_SK_CP_SP_Email_txtbox.TabIndex = 12;
+            // 
+            // UI_SK_CP_SP_Fax_txtbox
+            // 
+            this.UI_SK_CP_SP_Fax_txtbox.Location = new System.Drawing.Point(220, 190);
+            this.UI_SK_CP_SP_Fax_txtbox.Name = "UI_SK_CP_SP_Fax_txtbox";
+            this.UI_SK_CP_SP_Fax_txtbox.Size = new System.Drawing.Size(150, 29);
+            this.UI_SK_CP_SP_Fax_txtbox.TabIndex = 12;
+            // 
+            // UI_SK_CP_SP_Phone_txtbox
+            // 
+            this.UI_SK_CP_SP_Phone_txtbox.Location = new System.Drawing.Point(220, 120);
+            this.UI_SK_CP_SP_Phone_txtbox.Name = "UI_SK_CP_SP_Phone_txtbox";
+            this.UI_SK_CP_SP_Phone_txtbox.Size = new System.Drawing.Size(150, 29);
+            this.UI_SK_CP_SP_Phone_txtbox.TabIndex = 12;
             // 
             // panel3
             // 
@@ -282,86 +339,27 @@
             this.label4.Text = "填寫運送方式";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // UI_SK_CP_SP_Phone_txtbox
+            // panel2
             // 
-            this.UI_SK_CP_SP_Phone_txtbox.Location = new System.Drawing.Point(200, 120);
-            this.UI_SK_CP_SP_Phone_txtbox.Name = "UI_SK_CP_SP_Phone_txtbox";
-            this.UI_SK_CP_SP_Phone_txtbox.Size = new System.Drawing.Size(150, 29);
-            this.UI_SK_CP_SP_Phone_txtbox.TabIndex = 12;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(171)))), ((int)(((byte)(143)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 45);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(950, 60);
+            this.panel2.TabIndex = 10;
             // 
-            // UI_SK_CP_SP_Fax_txtbox
+            // label1
             // 
-            this.UI_SK_CP_SP_Fax_txtbox.Location = new System.Drawing.Point(200, 330);
-            this.UI_SK_CP_SP_Fax_txtbox.Name = "UI_SK_CP_SP_Fax_txtbox";
-            this.UI_SK_CP_SP_Fax_txtbox.Size = new System.Drawing.Size(260, 29);
-            this.UI_SK_CP_SP_Fax_txtbox.TabIndex = 12;
-            // 
-            // UI_SK_CP_SP_Email_txtbox
-            // 
-            this.UI_SK_CP_SP_Email_txtbox.Location = new System.Drawing.Point(200, 190);
-            this.UI_SK_CP_SP_Email_txtbox.Name = "UI_SK_CP_SP_Email_txtbox";
-            this.UI_SK_CP_SP_Email_txtbox.Size = new System.Drawing.Size(150, 29);
-            this.UI_SK_CP_SP_Email_txtbox.TabIndex = 12;
-            // 
-            // UI_SK_CP_SP_Address_txtbox
-            // 
-            this.UI_SK_CP_SP_Address_txtbox.Location = new System.Drawing.Point(200, 260);
-            this.UI_SK_CP_SP_Address_txtbox.Name = "UI_SK_CP_SP_Address_txtbox";
-            this.UI_SK_CP_SP_Address_txtbox.Size = new System.Drawing.Size(260, 29);
-            this.UI_SK_CP_SP_Address_txtbox.TabIndex = 12;
-            // 
-            // UI_SK_CP_SP_SentWay_combobox
-            // 
-            this.UI_SK_CP_SP_SentWay_combobox.FormattingEnabled = true;
-            this.UI_SK_CP_SP_SentWay_combobox.Items.AddRange(new object[] {
-            "宅急便",
-            "商店店到店",
-            "EMS",
-            "好運"});
-            this.UI_SK_CP_SP_SentWay_combobox.Location = new System.Drawing.Point(640, 120);
-            this.UI_SK_CP_SP_SentWay_combobox.Name = "UI_SK_CP_SP_SentWay_combobox";
-            this.UI_SK_CP_SP_SentWay_combobox.Size = new System.Drawing.Size(210, 26);
-            this.UI_SK_CP_SP_SentWay_combobox.TabIndex = 13;
-            // 
-            // UI_SK_CP_SP_Phone_lbl
-            // 
-            this.UI_SK_CP_SP_Phone_lbl.Font = new System.Drawing.Font("新細明體", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.UI_SK_CP_SP_Phone_lbl.Location = new System.Drawing.Point(20, 110);
-            this.UI_SK_CP_SP_Phone_lbl.Name = "UI_SK_CP_SP_Phone_lbl";
-            this.UI_SK_CP_SP_Phone_lbl.Size = new System.Drawing.Size(180, 50);
-            this.UI_SK_CP_SP_Phone_lbl.TabIndex = 14;
-            this.UI_SK_CP_SP_Phone_lbl.Text = "行動電話：";
-            this.UI_SK_CP_SP_Phone_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // UI_SK_CP_SP_Fax_lbl
-            // 
-            this.UI_SK_CP_SP_Fax_lbl.Font = new System.Drawing.Font("新細明體", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.UI_SK_CP_SP_Fax_lbl.Location = new System.Drawing.Point(20, 180);
-            this.UI_SK_CP_SP_Fax_lbl.Name = "UI_SK_CP_SP_Fax_lbl";
-            this.UI_SK_CP_SP_Fax_lbl.Size = new System.Drawing.Size(180, 50);
-            this.UI_SK_CP_SP_Fax_lbl.TabIndex = 14;
-            this.UI_SK_CP_SP_Fax_lbl.Text = "傳真號碼：";
-            this.UI_SK_CP_SP_Fax_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // UI_SK_CP_SP_Email_lbl
-            // 
-            this.UI_SK_CP_SP_Email_lbl.Font = new System.Drawing.Font("新細明體", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.UI_SK_CP_SP_Email_lbl.Location = new System.Drawing.Point(20, 250);
-            this.UI_SK_CP_SP_Email_lbl.Name = "UI_SK_CP_SP_Email_lbl";
-            this.UI_SK_CP_SP_Email_lbl.Size = new System.Drawing.Size(180, 50);
-            this.UI_SK_CP_SP_Email_lbl.TabIndex = 14;
-            this.UI_SK_CP_SP_Email_lbl.Text = "電子郵件：";
-            this.UI_SK_CP_SP_Email_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // UI_SK_CP_SP_Address_lbl
-            // 
-            this.UI_SK_CP_SP_Address_lbl.Font = new System.Drawing.Font("新細明體", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.UI_SK_CP_SP_Address_lbl.Location = new System.Drawing.Point(20, 320);
-            this.UI_SK_CP_SP_Address_lbl.Name = "UI_SK_CP_SP_Address_lbl";
-            this.UI_SK_CP_SP_Address_lbl.Size = new System.Drawing.Size(180, 50);
-            this.UI_SK_CP_SP_Address_lbl.TabIndex = 14;
-            this.UI_SK_CP_SP_Address_lbl.Text = "送貨地址：";
-            this.UI_SK_CP_SP_Address_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(164, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(236, 45);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "選擇付款方式";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button3
             // 
@@ -372,18 +370,6 @@
             this.button3.Text = "下一步，確認資料";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // UI_SK_CP_SP4_lbl
-            // 
-            this.UI_SK_CP_SP4_lbl.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.UI_SK_CP_SP4_lbl.Location = new System.Drawing.Point(20, 270);
-            this.UI_SK_CP_SP4_lbl.Name = "UI_SK_CP_SP4_lbl";
-            this.UI_SK_CP_SP4_lbl.Size = new System.Drawing.Size(310, 49);
-            this.UI_SK_CP_SP4_lbl.TabIndex = 4;
-            this.UI_SK_CP_SP4_lbl.TabStop = true;
-            this.UI_SK_CP_SP4_lbl.Text = "連線PMID1";
-            this.UI_SK_CP_SP4_lbl.UseVisualStyleBackColor = true;
-           // this.UI_SK_CP_SP4_lbl.CheckedChanged += new System.EventHandler(this.UI_SK_CP_SP4_lbl_CheckedChanged);
             // 
             // UI_SK_ChoosePay
             // 
@@ -407,13 +393,12 @@
             this.Controls.SetChildIndex(this.button3, 0);
             this.UI_SK_CP_GroupBox1.ResumeLayout(false);
             this.UI_SK_CP_GRPBOX_PayMethon.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,6 +434,5 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RadioButton UI_SK_CP_SP4_lbl;
     }
 }

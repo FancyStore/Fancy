@@ -64,6 +64,12 @@ namespace UI_SK_ShoppingCart
 
             }
 
+            UI_SK_RW_SP_Phone_Dynamiclbl.Text = UI_SK_CP_SP_Phone_Str;
+            UI_SK_RW_SP_Fax_Dynamiclbl.Text = UI_SK_CP_SP_Fax_Str;
+            UI_SK_RW_SP_Email_Dynamiclbl.Text = UI_SK_CP_SP_Email_Str;
+            UI_SK_RW_SP_Address_Dynamiclbl.Text = UI_SK_CP_SP_Address_Str;
+            UI_SK_RW_SP_SentWay_Dynamiclbl.Text = UI_SK_CP_SP_SentWay_Str;
+
 
         }
 
@@ -156,6 +162,11 @@ namespace UI_SK_ShoppingCart
            
 
           
+        }
+
+        private void UI_SK_RW_SP_SentWay_lbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
