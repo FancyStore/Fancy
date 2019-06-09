@@ -67,6 +67,7 @@ namespace UI_AL_ProductDetail
                 Label Lbl_Washing = new Label();
                 Lbl_Washing.AutoSize = false;
                 Lbl_Washing.Width = Flp_Washing.Width;
+                Lbl_Washing.Height=40;
                 Lbl_Washing.Font = new Font("微軟正黑體", 10F);
                 Lbl_Washing.Text = n.Washing.WashingName;
                 Flp_Washing.Controls.Add(Lbl_Washing);
@@ -109,7 +110,6 @@ namespace UI_AL_ProductDetail
 
         private void Btn_Color_Enter(object sender, EventArgs e)//觸碰顏色改照片
         {
-            //var q = et.Photos.Where(m => m.PhotoID == (int)((Button)sender).Tag).Select(m => m.Photo1);
             var photoidquery = et.ProductColors.Where(n => n.ProductColorID == (int)((Button)sender).Tag).Select(n => n.PhotoID).First();
             var photoquery = et.Photos.Where(n => n.PhotoID == photoidquery).Select(n => n.Photo1);
             GetPicture(Pb_Productimage, photoquery.First());
@@ -154,8 +154,8 @@ namespace UI_AL_ProductDetail
             foreach (var n in photoquery)//產生商品照片
             {
                 PictureBox Pb_Image = new PictureBox();
-                Pb_Image.Height = 50;
-                Pb_Image.Width = 50;
+                Pb_Image.Height = 70;
+                Pb_Image.Width = 70;
                 Pb_Image.SizeMode = PictureBoxSizeMode.StretchImage;
                 Pb_Image.Tag = n.Photo.Photo1;
                 GetPicture(Pb_Image, n.Photo.Photo1);
@@ -229,8 +229,8 @@ namespace UI_AL_ProductDetail
 
         private void button2_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = Cls_Utility.Class1.CartList;
+            //dataGridView1.DataSource = null;
+            //dataGridView1.DataSource = Cls_Utility.Class1.CartList;
         }
     }
 }

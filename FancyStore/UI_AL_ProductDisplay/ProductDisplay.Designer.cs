@@ -32,10 +32,10 @@
             this.Flp_CategoryM = new System.Windows.Forms.FlowLayoutPanel();
             this.Flp_CategoryS = new System.Windows.Forms.FlowLayoutPanel();
             this.Flp_Products = new System.Windows.Forms.FlowLayoutPanel();
-            this.Bar_BtnM = new System.Windows.Forms.Panel();
             this.P_Search = new System.Windows.Forms.Panel();
-            this.Btn_Search = new System.Windows.Forms.Button();
             this.Tb_Searchbox = new System.Windows.Forms.TextBox();
+            this.Btn_Search = new System.Windows.Forms.Button();
+            this.Bar_BtnM = new System.Windows.Forms.Panel();
             this.Tlp_Bottom.SuspendLayout();
             this.P_Search.SuspendLayout();
             this.SuspendLayout();
@@ -92,15 +92,6 @@
             this.Flp_Products.TabIndex = 2;
             this.Flp_Products.Resize += new System.EventHandler(this.flowLayoutPanel3_Resize);
             // 
-            // Bar_BtnM
-            // 
-            this.Bar_BtnM.BackColor = System.Drawing.Color.Black;
-            this.Bar_BtnM.Location = new System.Drawing.Point(11, 30);
-            this.Bar_BtnM.Margin = new System.Windows.Forms.Padding(0);
-            this.Bar_BtnM.Name = "Bar_BtnM";
-            this.Bar_BtnM.Size = new System.Drawing.Size(100, 5);
-            this.Bar_BtnM.TabIndex = 1;
-            // 
             // P_Search
             // 
             this.P_Search.Controls.Add(this.Tb_Searchbox);
@@ -110,6 +101,17 @@
             this.P_Search.Name = "P_Search";
             this.P_Search.Size = new System.Drawing.Size(274, 60);
             this.P_Search.TabIndex = 4;
+            // 
+            // Tb_Searchbox
+            // 
+            this.Tb_Searchbox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Tb_Searchbox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.Tb_Searchbox.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Tb_Searchbox.Location = new System.Drawing.Point(3, 28);
+            this.Tb_Searchbox.MaxLength = 50;
+            this.Tb_Searchbox.Name = "Tb_Searchbox";
+            this.Tb_Searchbox.Size = new System.Drawing.Size(174, 27);
+            this.Tb_Searchbox.TabIndex = 1;
             // 
             // Btn_Search
             // 
@@ -125,14 +127,14 @@
             this.Btn_Search.UseVisualStyleBackColor = false;
             this.Btn_Search.Click += new System.EventHandler(this.Btn_Search_Click);
             // 
-            // Tb_Searchbox
+            // Bar_BtnM
             // 
-            this.Tb_Searchbox.Location = new System.Drawing.Point(3, 28);
-            this.Tb_Searchbox.MaxLength = 50;
-            this.Tb_Searchbox.Multiline = true;
-            this.Tb_Searchbox.Name = "Tb_Searchbox";
-            this.Tb_Searchbox.Size = new System.Drawing.Size(174, 28);
-            this.Tb_Searchbox.TabIndex = 1;
+            this.Bar_BtnM.BackColor = System.Drawing.Color.Black;
+            this.Bar_BtnM.Location = new System.Drawing.Point(11, 30);
+            this.Bar_BtnM.Margin = new System.Windows.Forms.Padding(0);
+            this.Bar_BtnM.Name = "Bar_BtnM";
+            this.Bar_BtnM.Size = new System.Drawing.Size(100, 5);
+            this.Bar_BtnM.TabIndex = 1;
             // 
             // ProductDisplay
             // 
@@ -142,7 +144,7 @@
             this.Controls.Add(this.Bar_BtnM);
             this.Controls.Add(this.Tlp_Bottom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductDisplay";
             this.ShowIcon = false;
             this.Text = "Form1";

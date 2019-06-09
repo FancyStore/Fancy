@@ -14,6 +14,8 @@ using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
 using Timer = System.Windows.Forms.Timer;
 using UI_AL_ProductDisplay;
+using UI_AL_Home;
+using UI_AL_AboutUs;
 
 namespace UI_JA_Main
 {
@@ -30,14 +32,14 @@ namespace UI_JA_Main
 
            }));
             t.Start();
-           
+
             Thread.Sleep(2000);
             InitializeComponent();
 
             if (Cls_JA_Member.IsAdmin)
             {
                 button10.Visible = true;
-            }          
+            }
         }
 
 
@@ -96,11 +98,23 @@ namespace UI_JA_Main
         private void button3_Click(object sender, EventArgs e)
         {
             panel4.Left = ((Button)sender).Left;
+            panel5.Controls.Clear();
+            Home p = new Home();
+            p.TopLevel = false;
+            panel5.Controls.Add(p);
+            p.Dock = DockStyle.Fill;
+            p.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             panel4.Left = ((Button)sender).Left;
+            panel5.Controls.Clear();
+            AboutUs p = new AboutUs();
+            p.TopLevel = false;
+            panel5.Controls.Add(p);
+            p.Dock = DockStyle.Fill;
+            p.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -185,7 +199,7 @@ namespace UI_JA_Main
             allMemberList.ShowDialog();
         }
 
-       private void button11_Click(object sender, EventArgs e)
+        private void button11_Click(object sender, EventArgs e)
         {
             OrdersSearch ordersSearch = new OrdersSearch();
             ordersSearch.ShowDialog();

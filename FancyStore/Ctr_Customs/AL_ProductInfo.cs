@@ -37,8 +37,8 @@ namespace Ctr_Customs
                 ms.Dispose();
             }
         }
-        public bool like = true;
-        public bool buy = true;
+        public bool like;
+        public bool buy;
 
         private void AL_ProductInfo_Load(object sender, EventArgs e)
         {

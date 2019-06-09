@@ -265,6 +265,14 @@
       <Project>{5392D1D7-99DD-4BA6-9965-F1C02C0B51CB}</Project>
       <Name>DB_Fancy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UI_AL_AboutUs\UI_AL_AboutUs.csproj">
+      <Project>{9d4921e7-a1ef-411a-a287-f8c7e0cdff4f}</Project>
+      <Name>UI_AL_AboutUs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UI_AL_Home\UI_AL_Home.csproj">
+      <Project>{f669cda7-2338-4af2-8201-55415faf0bfe}</Project>
+      <Name>UI_AL_Home</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UI_AL_ProductDisplay\UI_AL_ProductDisplay.csproj">
       <Project>{67e81c3c-f93c-43d1-8dab-7f6c9443298d}</Project>
       <Name>UI_AL_ProductDisplay</Name>

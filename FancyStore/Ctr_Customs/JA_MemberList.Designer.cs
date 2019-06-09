@@ -43,7 +43,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.開通用驗證碼 = new UI_JA_Members.JA_Input();
             this.使用者密碼 = new UI_JA_Members.JA_Input();
-
             this.SEmail = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserImg)).BeginInit();
@@ -71,7 +70,6 @@
             // 
             this.刪除_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.刪除_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-
             this.刪除_B.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.刪除_B.Image = global::Ctr_Customs.img.icons8_trash_16;
             this.刪除_B.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -88,7 +86,6 @@
             // 
             this.展開.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(166)))), ((int)(((byte)(121)))));
             this.展開.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-
             this.展開.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.展開.Image = global::Ctr_Customs.img.icons8_expand_arrow_24;
             this.展開.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -263,7 +260,6 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "JA_MemberList";
-
             this.Size = new System.Drawing.Size(1006, 130);
             this.Load += new System.EventHandler(this.JA_MemberList_Load);
             this.panel1.ResumeLayout(false);

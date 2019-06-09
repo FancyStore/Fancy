@@ -15,12 +15,15 @@ namespace UI_AL_ProductDisplay
 {
     public partial class ProductDisplay : Form
     {
-        public ProductDisplay(int CategoryLargeID)
+        public ProductDisplay(int categorylargeID)
         {
             InitializeComponent();
-            LoadAll(CategoryLargeID);
+            CategoryLargeID = categorylargeID;
+            LoadAll(categorylargeID);
             Bar_BtnM.Left = Flp_CategoryM.Left + 3;
         }
+
+        int CategoryLargeID;
 
         void LoadAll(int CategoryLargeID)
         {
@@ -28,6 +31,7 @@ namespace UI_AL_ProductDisplay
             LoadM(CategoryLargeID);
             LoadS(categoryLquery.CategorySmall.CategoryMiddle.CategoryMID);
             LoadProduct(categoryLquery.CategorySID);
+            LoadKeyword();
         }
 
         FancyStoreEntities et = new FancyStoreEntities();
@@ -138,7 +142,7 @@ namespace UI_AL_ProductDisplay
                 };
                 info.AddFav += (a, b) =>//委派加入我的最愛
                 {
-                    et.MyFavorites.Add(new MyFavorite { UserID = Cls_JA_Member.UserID, ProductID = n.ProductID });
+                    et.MyFavorites.Add(new MyFavorite { UserID = Cls_JA_Member.UserID, ProductID = n.ProductID, CreateDate = DateTime.Now });
                     et.SaveChanges();
                 };
                 info.RemoveFav += (a, b) =>//委派刪除我的最愛
@@ -163,8 +167,39 @@ namespace UI_AL_ProductDisplay
         private void Btn_Search_Click(object sender, EventArgs e)
         {
             Flp_Products.Controls.Clear();
-            var q = et.Products.Where(n => n.ProductName.Contains(Tb_Searchbox.Text.Trim()) && n.ProductInDate <= DateTime.Now && n.ProductOutDate >= DateTime.Now);
-            CreateProduct(q);
+            var q = et.Products.Where(n => n.CategorySmall.CategoryMiddle.CategoryLID == CategoryLargeID && n.ProductName.Contains(Tb_Searchbox.Text.Trim()) && n.ProductInDate <= DateTime.Now && n.ProductOutDate >= DateTime.Now);
+            if (q.Count() > 0)
+                CreateProduct(q);
+            else
+            {
+                MessageBox.Show("查無產品");//強制跳回第一項
+                var q1 = et.Products.Where(n => n.CategorySmall.CategoryMiddle.CategoryLID == CategoryLargeID).Select(n=>n.CategorySID).First();
+                LoadProduct(q1);
+                int first = 0;
+                foreach (Button btn_S in Flp_CategoryS.Controls)
+                {
+                    btn_S.BackColor = Flp_CategoryS.BackColor;
+                    if (first == 0)
+                    {
+                        btn_S.BackColor = System.Drawing.Color.Orange;
+                        first = 1;
+                    }
+                }
+            }
         }
+
+        void LoadKeyword()
+        {
+            AutoCompleteStringCollection source = new AutoCompleteStringCollection();
+            var keywordquery = et.KeyWords.Take(3);
+            foreach (var n in keywordquery)
+            {
+                source.Add(n.Keyword1);
+            }
+            Tb_Searchbox.AutoCompleteMode = AutoCompleteMode.Suggest;
+            Tb_Searchbox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            Tb_Searchbox.AutoCompleteCustomSource = source;
+        }
+
     }
 }
