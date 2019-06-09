@@ -49,6 +49,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,9 +64,10 @@
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(851, 0);
+            this.panel1.Location = new System.Drawing.Point(1134, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 627);
+            this.panel1.Size = new System.Drawing.Size(267, 784);
             this.panel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -77,10 +79,10 @@
             this.flowLayoutPanel1.Controls.Add(this.button14);
             this.flowLayoutPanel1.Controls.Add(this.button12);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 165);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 206);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 462);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(267, 578);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // button8
@@ -94,7 +96,7 @@
             this.button8.Location = new System.Drawing.Point(0, 0);
             this.button8.Margin = new System.Windows.Forms.Padding(0);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(200, 40);
+            this.button8.Size = new System.Drawing.Size(267, 50);
             this.button8.TabIndex = 5;
             this.button8.Text = "會員資料";
             this.button8.UseVisualStyleBackColor = false;
@@ -108,10 +110,10 @@
             this.button9.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button9.Image = global::UI_JA_Main.IconPIc.iconfinder_like;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(0, 40);
+            this.button9.Location = new System.Drawing.Point(0, 50);
             this.button9.Margin = new System.Windows.Forms.Padding(0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(200, 40);
+            this.button9.Size = new System.Drawing.Size(267, 50);
             this.button9.TabIndex = 6;
             this.button9.Text = "我的最愛";
             this.button9.UseVisualStyleBackColor = false;
@@ -125,10 +127,10 @@
             this.button10.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button10.Image = global::UI_JA_Main.IconPIc.icons8_admin_settings_male_24;
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(0, 80);
+            this.button10.Location = new System.Drawing.Point(0, 100);
             this.button10.Margin = new System.Windows.Forms.Padding(0);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(200, 40);
+            this.button10.Size = new System.Drawing.Size(267, 50);
             this.button10.TabIndex = 7;
             this.button10.Text = "系統管理";
             this.button10.UseVisualStyleBackColor = false;
@@ -143,10 +145,10 @@
             this.button11.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button11.Image = global::UI_JA_Main.IconPIc.icons8_purchase_order_26;
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(0, 120);
+            this.button11.Location = new System.Drawing.Point(0, 150);
             this.button11.Margin = new System.Windows.Forms.Padding(0);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(200, 40);
+            this.button11.Size = new System.Drawing.Size(267, 50);
             this.button11.TabIndex = 8;
             this.button11.Text = "訂單查詢";
             this.button11.UseVisualStyleBackColor = false;
@@ -160,10 +162,10 @@
             this.button14.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button14.Image = global::UI_JA_Main.IconPIc.icons8_password_reset_32;
             this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.Location = new System.Drawing.Point(0, 160);
+            this.button14.Location = new System.Drawing.Point(0, 200);
             this.button14.Margin = new System.Windows.Forms.Padding(0);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(200, 40);
+            this.button14.Size = new System.Drawing.Size(267, 50);
             this.button14.TabIndex = 9;
             this.button14.Text = "更改密碼";
             this.button14.UseVisualStyleBackColor = false;
@@ -177,10 +179,10 @@
             this.button12.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button12.Image = global::UI_JA_Main.IconPIc.iconfinder_logout;
             this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(0, 200);
+            this.button12.Location = new System.Drawing.Point(0, 250);
             this.button12.Margin = new System.Windows.Forms.Padding(0);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(200, 40);
+            this.button12.Size = new System.Drawing.Size(267, 50);
             this.button12.TabIndex = 9;
             this.button12.Text = "登出";
             this.button12.UseVisualStyleBackColor = false;
@@ -191,8 +193,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::UI_JA_Main.IconPIc.colors_1772984_640;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 165);
+            this.pictureBox1.Size = new System.Drawing.Size(267, 206);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -206,8 +209,9 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(851, 57);
+            this.panel2.Size = new System.Drawing.Size(1134, 71);
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
@@ -222,9 +226,10 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::UI_JA_Main.IconPIc.cart_28_24;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(716, 11);
+            this.button2.Location = new System.Drawing.Point(954, 14);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 38);
+            this.button2.Size = new System.Drawing.Size(113, 48);
             this.button2.TabIndex = 4;
             this.button2.Text = "購物車";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -234,9 +239,10 @@
             // 
             this.label1.Font = new System.Drawing.Font("Segoe Script", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(64, 9);
+            this.label1.Location = new System.Drawing.Point(85, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 42);
+            this.label1.Size = new System.Drawing.Size(185, 52);
             this.label1.TabIndex = 3;
             this.label1.Text = "Fancy";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -247,9 +253,10 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::UI_JA_Main.IconPIc.iconfinder_menu_alt_134216;
-            this.button1.Location = new System.Drawing.Point(806, 0);
+            this.button1.Location = new System.Drawing.Point(1074, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 57);
+            this.button1.Size = new System.Drawing.Size(60, 71);
             this.button1.TabIndex = 2;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -258,9 +265,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = global::UI_JA_Main.IconPIc.icons8_secured_letter_24;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 7);
+            this.pictureBox2.Location = new System.Drawing.Point(16, 9);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(46, 42);
+            this.pictureBox2.Size = new System.Drawing.Size(61, 52);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -268,25 +276,28 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(62)))));
+            this.panel3.Controls.Add(this.button7);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 57);
+            this.panel3.Location = new System.Drawing.Point(0, 71);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(851, 40);
+            this.panel3.Size = new System.Drawing.Size(1134, 50);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(241)))), ((int)(((byte)(210)))));
-            this.panel4.Location = new System.Drawing.Point(274, 35);
+            this.panel4.Location = new System.Drawing.Point(365, 44);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(75, 5);
-            this.panel4.TabIndex = 3;
+            this.panel4.Size = new System.Drawing.Size(100, 6);
+            this.panel4.TabIndex = 5;
             // 
             // button6
             // 
@@ -294,11 +305,12 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(496, 0);
+            this.button6.Location = new System.Drawing.Point(661, 0);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 40);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Mens";
+            this.button6.Size = new System.Drawing.Size(100, 50);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "下半身";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -308,11 +320,12 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(385, 0);
+            this.button5.Location = new System.Drawing.Point(513, 0);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 40);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Womes";
+            this.button5.Size = new System.Drawing.Size(100, 50);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "衣料品";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -322,11 +335,12 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(607, 0);
+            this.button4.Location = new System.Drawing.Point(809, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 40);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "About";
+            this.button4.Size = new System.Drawing.Size(100, 50);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "飾品";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -336,9 +350,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(274, 0);
+            this.button3.Location = new System.Drawing.Point(365, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 40);
+            this.button3.Size = new System.Drawing.Size(100, 50);
             this.button3.TabIndex = 0;
             this.button3.Text = "Home";
             this.button3.UseVisualStyleBackColor = true;
@@ -346,23 +361,40 @@
             // 
             // panel6
             // 
-            this.panel6.Location = new System.Drawing.Point(0, 95);
+            this.panel6.Location = new System.Drawing.Point(0, 119);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1051, 532);
+            this.panel6.Size = new System.Drawing.Size(1401, 665);
             this.panel6.TabIndex = 3;
+            // 
+            // button7
+            // 
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(939, 0);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(100, 50);
+            this.button7.TabIndex = 4;
+            this.button7.Text = "About";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // FancyMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1051, 627);
+            this.ClientSize = new System.Drawing.Size(1401, 784);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FancyMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FancyMain";
@@ -400,5 +432,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button7;
     }
 }

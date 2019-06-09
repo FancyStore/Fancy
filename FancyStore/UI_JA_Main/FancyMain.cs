@@ -93,16 +93,13 @@ namespace UI_JA_Main
             NowY = e.Y;
         }
 
+        //Home
         private void button3_Click(object sender, EventArgs e)
         {
             panel4.Left = ((Button)sender).Left;
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            panel4.Left = ((Button)sender).Left;
-        }
-
+        //衣料品
         private void button5_Click(object sender, EventArgs e)
         {
             panel4.Left = ((Button)sender).Left;
@@ -114,9 +111,36 @@ namespace UI_JA_Main
             p.Show();
         }
 
+
+        //下半身
         private void button6_Click(object sender, EventArgs e)
         {
             panel4.Left = ((Button)sender).Left;
+            panel6.Controls.Clear();
+            ProductDisplay p = new ProductDisplay(2);
+            p.TopLevel = false;
+            panel6.Controls.Add(p);
+            p.Dock = DockStyle.Fill;
+            p.Show();
+        }
+
+        //飾品
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel4.Left = ((Button)sender).Left;
+            panel6.Controls.Clear();
+            ProductDisplay p = new ProductDisplay(5);
+            p.TopLevel = false;
+            panel6.Controls.Add(p);
+            p.Dock = DockStyle.Fill;
+            p.Show();
+        }
+
+        //About
+        private void button7_Click(object sender, EventArgs e)
+        {
+            panel4.Left = ((Button)sender).Left;
+
         }
 
         private void button12_Click(object sender, EventArgs e)
