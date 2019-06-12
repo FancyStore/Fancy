@@ -133,7 +133,7 @@ namespace UI_AL_ProductDisplay
             foreach (var n in productquery)
             {
                 var photoquery = et.ProductPhotoes.Where(m => m.ProductID == n.ProductID);
-                var favoritequery = et.MyFavorites.Any(o => o.ProductID == n.ProductID);
+                var favoritequery = et.MyFavorites.Any(o =>o.UserID== Cls_JA_Member.UserID && o.ProductID == n.ProductID);
                 info = new AL_ProductInfo
                 {
                     PName = n.ProductName,
