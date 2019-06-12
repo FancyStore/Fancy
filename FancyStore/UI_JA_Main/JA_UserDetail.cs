@@ -36,7 +36,13 @@ namespace UI_JA_Main
             this.Phone.Text = data.Phone;
             this.Address.Text = data.Address;
             this.日期.Text = data.RegistrationDate.ToShortDateString();
-            this.金額.Text = "99999";
+            if (Cls_JA_Member.db.OrderDetails.Any(n => n.OrderHeader.UserID == Cls_JA_Member.UserID))
+            {
+                var sum = Cls_JA_Member.db.OrderDetails.Where(n => n.OrderHeader.UserID == Cls_JA_Member.UserID)
+                .Sum(n => n.UnitPrice * n.OrderQTY);
+                //this.金額.Text = $"{sum:c0}";
+            }
+            else { this.金額.Text = "0"; }
             byte[] q;
             if (data.PhotoID == null)
             { q = Cls_JA_Member.db.Photos.Where(n => n.PhotoID == 1).Select(n => n.Photo1).First(); }

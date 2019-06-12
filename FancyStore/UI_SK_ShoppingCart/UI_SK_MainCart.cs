@@ -113,11 +113,15 @@ namespace UI_SK_ShoppingCart
 
         public void UI_SK_MainCart_Load(object sender, EventArgs e)
         {
-            
-            
+            if (Cls_Utility.Class1.CartList.Count - 1 < 0)
+            {
+                this.UI_SK_MC_GoToChoosePay_Btn.Enabled = false;
+                MessageBox.Show("購物車沒東西,將返回第一頁", "System Alarm");
+                this.Close();
+            }
 
 
-        }
+            }
 
         #region 重刷FlowlayoutPanel
 
