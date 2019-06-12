@@ -202,6 +202,11 @@ namespace UI_EW_Maintain
         //圖片
         private void btnPhoto_Click(object sender, EventArgs e)
         {
+            if (cProd.ProductID == 0)
+            {
+                MessageBox.Show($"請先將產品資料 [存檔] 後再執行本作業 !");
+                return;
+            }
             FrmProductPhoto f = new FrmProductPhoto(cProd);
             f.ShowDialog();
         }
@@ -209,6 +214,11 @@ namespace UI_EW_Maintain
         //顏色
         private void btnColot_Click(object sender, EventArgs e)
         {
+            if (cProd.ProductID == 0)
+            {
+                MessageBox.Show($"請先將產品資料 [存檔] 後再執行本作業 !");
+                return;
+            }
             FrmProductColor f = new FrmProductColor(cProd);
             f.ShowDialog();
         }
@@ -216,6 +226,11 @@ namespace UI_EW_Maintain
         //尺吋大小
         private void btnSize_Click(object sender, EventArgs e)
         {
+            if (cProd.ProductID == 0)
+            {
+                MessageBox.Show($"請先將產品資料 [存檔] 後再執行本作業 !");
+                return;
+            }
             FrmProductSize f = new FrmProductSize(cProd);
             f.ShowDialog();
         }
@@ -223,6 +238,11 @@ namespace UI_EW_Maintain
         //洗滌方式
         private void btnWashing_Click(object sender, EventArgs e)
         {
+            if (cProd.ProductID == 0)
+            {
+                MessageBox.Show($"請先將產品資料 [存檔] 後再執行本作業 !");
+                return;
+            }
             FrmProductWashing f = new FrmProductWashing(cProd);
             f.ShowDialog();
         }
@@ -230,6 +250,11 @@ namespace UI_EW_Maintain
         //庫存量
         private void btnStock_Click(object sender, EventArgs e)
         {
+            if (cProd.ProductID == 0)
+            {
+                MessageBox.Show($"請先將產品資料 [存檔] 後再執行本作業 !");
+                return;
+            }
             FrmProductStock f = new FrmProductStock(cProd);
             f.ShowDialog();
         }
