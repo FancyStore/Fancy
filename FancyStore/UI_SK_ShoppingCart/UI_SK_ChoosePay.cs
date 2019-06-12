@@ -317,8 +317,8 @@ namespace UI_SK_ShoppingCart
                 UI_SK_CP_Way_Bool_RB4 == true)
             {
                 UI_SK_RecieptWay UISKRW = new UI_SK_RecieptWay();
-                UISKRW.Show();
-                this.Hide();
+                UISKRW.ShowDialog();
+                this.Close();
             }
             else
             {

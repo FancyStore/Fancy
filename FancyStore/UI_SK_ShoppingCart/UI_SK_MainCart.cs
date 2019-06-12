@@ -102,8 +102,9 @@ namespace UI_SK_ShoppingCart
                 }
             }
             UI_SK_ChoosePay UISKCP = new UI_SK_ChoosePay();
-            UISKCP.Show();
-            this.Hide();
+            UISKCP.ShowDialog();
+            //UISKCP.TopMost = true;
+            this.Close();
         }
         #endregion 第一次庫存檢查
 
