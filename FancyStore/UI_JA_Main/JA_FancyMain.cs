@@ -230,11 +230,13 @@ namespace UI_JA_Main
 
         }
 
+        //我的最愛
         private void button9_Click(object sender, EventArgs e)
         {
             JA_Favorite favorite = new JA_Favorite();
             this.TopMost = false;
             favorite.ShowDialog();
+            button5_Click(button5, e);
         }
 
         //購物車
