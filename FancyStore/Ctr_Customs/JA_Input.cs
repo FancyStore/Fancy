@@ -39,7 +39,13 @@ namespace UI_JA_Members
             { return this.Textbox_text.Text; }
             set { this.Textbox_text.Text = value; }
         }
-
+        public bool texboxsetting
+        {
+            set
+            {
+                this.Textbox_text.UseSystemPasswordChar = value;
+            }
+        }
 
         private void Account_text_Leave(object sender, EventArgs e)
         {

@@ -19,6 +19,7 @@ namespace UI_JA_Members
         {
             InitializeComponent();
             this.Gender.SelectedIndex = 0;
+            this.jA_Input6.texboxsetting = true;
         }
         private void button7_Click(object sender, EventArgs e)
         {
@@ -84,6 +85,7 @@ namespace UI_JA_Members
         //登入
         private void button3_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 if (Cls_JA_Member.VaildateUser(this.jA_Input5.輸入塊字串, this.jA_Input6.輸入塊字串))
