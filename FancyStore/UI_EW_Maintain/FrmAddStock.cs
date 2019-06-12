@@ -40,7 +40,7 @@ namespace UI_EW_Maintain
             var s = dbContext.VW_EW_ProductSize;
             vWEWProductSizeBindingSource.DataSource = s.ToList();
 
-            var q = dbContext.ProductStocks.Where(x => x.StockQTY < x.MinStock);
+            var q = dbContext.ProductStocks.Where(x => x.StockQTY < x.MinStock).OrderBy(x=>x.StockQTY);
             productStockBindingSource.DataSource = q.ToList();
             productStockDataGridView.DataSource = productStockBindingSource;
         }
