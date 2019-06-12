@@ -49,7 +49,11 @@ namespace UI_SK_ShoppingCart
         #region 付款方式顯示 LINQ
         internal void UI_SK_ChoosePay_Load(object sender, EventArgs e)
         {
-             
+            if (Cls_Utility.Class1.CartList.Count - 1 < 0)
+            {
+                MessageBox.Show("購物車沒東西,下單失敗", "System Alarm");
+                this.Close();
+            }
 
             //FirstOrDefault(); 取出序列的第一筆資料,若無資料則回傳 Default
             //UI_SK_CP_PM_Name1_lbl 付款方式 (從資料庫提取),
